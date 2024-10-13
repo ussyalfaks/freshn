@@ -2,10 +2,9 @@
 
 import { useState, useRef } from 'react'
 import Image from 'next/image'
-import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Upload, X, ChevronDown, Eye, EyeOff } from 'lucide-react'
+import { X, ChevronDown } from 'lucide-react'
 
 export default function HostInformationForm() {
   const [hostName, setHostName] = useState('')
@@ -14,7 +13,6 @@ export default function HostInformationForm() {
   const [phoneNumber, setPhoneNumber] = useState('')
   const [email, setEmail] = useState('')
   const [profilePhoto, setProfilePhoto] = useState<File | null>(null)
-  const [showEmail, setShowEmail] = useState(false)
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {

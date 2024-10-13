@@ -7,7 +7,6 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Calendar } from "@/components/ui/calendar"
 import { Search } from 'lucide-react'
 import { format, parse } from 'date-fns'
-import { cn } from "@/lib/utils"
 import { DateRange } from 'react-day-picker'
 import Destinations from './Destinations'
 import Guests from './Guests'

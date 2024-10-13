@@ -6,7 +6,10 @@ import { useState } from 'react';
 // import PropertyDetailsForm from './PropertyDetailsForm';
 //import PhotoUpload from '../components/PhotoUpload';
 // import PricingAvailabilityForm from '../components/PricingAvailabilityForm';
-import HostInformationForm from '../components/HostInformationForm';
+//import HostInformationForm from '../components/HostInformationForm';
+
+// import SignUp from'./SignUp';
+import CreatePasswordPage from './CreatePassword';
 
 
 
@@ -20,7 +23,7 @@ const HeaderAcc = () => {
 
   return (
     <div className='bg-[#F9F9F9]'>
-    <header className="flex justify-between px-[100px]  items-center p-4 bg-[#F9F9F9]">
+    <header className="z-50  flex justify-between px-[100px]  items-center p-4 bg-[#F9F9F9] shadow-md">
       
       <Image 
           src="/img_header_logo.png"
@@ -48,8 +51,11 @@ const HeaderAcc = () => {
     {/* <PropertyBasicsForm/> 
     <PropertyDetailsForm/> 
      <PhotoUpload/> 
-    <PricingAvailabilityForm/> */}
+    <PricingAvailabilityForm/>  
     <HostInformationForm/>
+    <SignUp/>  */}
+    <CreatePasswordPage/>
+
     
     
     </div>

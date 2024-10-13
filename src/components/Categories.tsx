@@ -1,7 +1,8 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import { MoveRight, MoveLeft, Filter } from "lucide-react"
+import Image from 'next/image'
+import { MoveRight, MoveLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 import { cn } from "@/lib/utils"
@@ -53,7 +54,7 @@ export default function CategoriesTab() {
 
   return (
       <>
-      <div className="w-full -ml-5 mb-6 relative">
+      <div className=" -ml-5 mb-6 relative">
       <Button 
             variant="ghost"
             size="icon"
@@ -99,13 +100,20 @@ export default function CategoriesTab() {
           >
             <MoveRight size={15} />
           </Button>
-          <Button variant="ghost" size="icon" className="p-2 bg-blue-500 text-white rounded-full shadow-md">
-            <Filter size={22} />
-          </Button>
+          <div className='flex items-center cursor-pointer'>
+          
+            <Image 
+              src='/Frame.svg' 
+              alt='filter icon' 
+              width={5}
+              height={5}
+              className=" h-5 w-5 mr-2"
+            />
+            <span className='font-medium capitalize text-md'> filter</span>
+          </div> 
         </div>
       </div>
-      
-      
+
       </>
 
   )
