@@ -1,12 +1,14 @@
 'use client'
 
-import { useState, useRef } from 'react'
-import Image from 'next/image'
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { X, ChevronDown } from 'lucide-react'
+import { useState, useRef } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { X, ChevronDown } from 'lucide-react';
+import HeaderAcc from '@/components/HeaderAcc';
 
-export default function HostInformationForm() {
+export default function Listyourproperty5() {
   const [hostName, setHostName] = useState('')
   const [hostBio, setHostBio] = useState('')
   const [phoneCode, setPhoneCode] = useState('+234')
@@ -39,6 +41,8 @@ export default function HostInformationForm() {
   }
 
   return (
+   <>
+    <HeaderAcc/>
     <form onSubmit={handleSubmit} className="max-w-6xl mx-auto p-6 space-y-6">
       <h1 className="text-2xl font-semibold mb-6">Host Information</h1>
 
@@ -51,7 +55,7 @@ export default function HostInformationForm() {
           value={hostName}
           onChange={(e) => setHostName(e.target.value)}
           placeholder="Input host name"
-          className="w-full p-2"
+          className="w-full py-6 px-2"
         />
       </div>
 
@@ -109,7 +113,7 @@ export default function HostInformationForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Input email address"
-            className="w-full pr-10"
+            className="w-full py-6 px-2"
           />
          
         </div>
@@ -150,7 +154,9 @@ export default function HostInformationForm() {
           <Image
             src={URL.createObjectURL(profilePhoto)}
             alt="Profile preview"
-            className="max-w-xs rounded"
+            width={150}
+            height={150}
+            className="max-w-xs rounded w-36 h-36"
           />
           <button
             type="button"
@@ -165,13 +171,26 @@ export default function HostInformationForm() {
      
 <div className="flex justify-end space-x-4 mt-4 items-center">
         <p className="text-sm text-gray-500">5/6</p>
-        <button type="submit" className="px-4 py-2 bg-[#F5F5F5] text-[#2A2A2A]  rounded-lg ">
-        &larr; Previous
-          </button>
-          <button type="submit" className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
-            Next &rarr;
-          </button> 
+
+        <Link href="/Listyourproperty4">
+    <button
+      type="button"
+      className="px-4 py-2 bg-[#F5F5F5] text-[#2A2A2A] rounded-lg">
+      &larr; Previous
+    </button>
+  </Link>
+
+  <Link href="/Listyourproperty6">
+    <button
+      type="button"
+      className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+      Next &rarr;
+    </button>
+  </Link>
+
            </div>
     </form>
+   
+   </>
   )
 }

@@ -2,14 +2,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronDown } from 'lucide-react'
 import { useState } from 'react';
-//  import PropertyBasicsForm from '../components/PropertyBasicsForm';
 // import PropertyDetailsForm from './PropertyDetailsForm';
 //import PhotoUpload from '../components/PhotoUpload';
 // import PricingAvailabilityForm from '../components/PricingAvailabilityForm';
 //import HostInformationForm from '../components/HostInformationForm';
 
 // import SignUp from'./SignUp';
-import CreatePasswordPage from './CreatePassword';
+// import CreatePasswordPage from './CreatePassword';
 
 
 
@@ -23,8 +22,9 @@ const HeaderAcc = () => {
 
   return (
     <div className='bg-[#F9F9F9]'>
-    <header className="z-50  flex justify-between px-[100px]  items-center p-4 bg-[#F9F9F9] shadow-md">
+    <header className="z-50  flex justify-between px-[100px] max-md:px-9  items-center p-4 bg-[#F9F9F9] shadow-md">
       
+      <Link href="/Homepage">
       <Image 
           src="/img_header_logo.png"
           alt="Freshinn Logo"
@@ -32,6 +32,7 @@ const HeaderAcc = () => {
           height={30}
           className='w-[168px] h-[30px]'
         />
+      </Link>
      
       <div className="flex items-center  space-x-4">
         <Link href="/add-property" className="px-4 py-2 rounded-md  transition">
@@ -47,16 +48,7 @@ const HeaderAcc = () => {
         </div>
       </div>
     </header>
-
-    {/* <PropertyBasicsForm/> 
-    <PropertyDetailsForm/> 
-     <PhotoUpload/> 
-    <PricingAvailabilityForm/>  
-    <HostInformationForm/>
-    <SignUp/>  */}
-    <CreatePasswordPage/>
-
-    
+ 
     
     </div>
 

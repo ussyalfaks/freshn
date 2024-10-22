@@ -2,10 +2,10 @@ import Image from "next/image"
 
 export default function TopDestination() {
   const destinations = [
-    { name: "Abuja", image: "/placeholder.svg?height=200&width=300" },
-    { name: "Lagos", image: "/placeholder.svg?height=200&width=300" },
-    { name: "Port-harcourt", image: "/placeholder.svg?height=200&width=300" },
-    { name: "Kaduna", image: "/placeholder.svg?height=200&width=300" },
+    { name: "Abuja", image: "/TD3.png" },
+    { name: "Lagos", image: "/TD4.png" },
+    { name: "Port-harcourt", image: "/TD2.png" },
+    { name: "Kaduna", image: "/TD3.png" },
   ]
 
   return (
@@ -15,11 +15,11 @@ export default function TopDestination() {
         {destinations.map((destination) => (
           <div key={destination.name} className="relative rounded-lg overflow-hidden ">
             <Image
-              src='/herobg.jpeg'
+              src={destination.image}
               alt={`${destination.name} cityscape`}
               width={400}
               height={450}
-              className="w-full h-60 object-cover"
+              className="w-full h-60"
             />
             <div className="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white px-3 py-2 rounded-full">
               <div className="flex items-center">

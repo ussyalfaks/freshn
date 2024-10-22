@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { User, CreditCard, Shield, HelpCircle, Check, X } from 'lucide-react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import Link from 'next/link';
 
 interface UserData {
   name: string;
   email: string;
   legalName: string;
   preferredName: string;
-  dateOfBirth: string;
+  dateOfBirth: Date;
   gender: string;
   phoneNumber: string;
   emergencyContact: string;
@@ -20,7 +23,7 @@ const UserProfile: React.FC = () => {
     email: 'johnsmith@gmail.com',
     legalName: 'David Okpolo',
     preferredName: 'Dave',
-    dateOfBirth: '--/--/----',
+    dateOfBirth: '27/08/1998',
     gender: 'Male',
     phoneNumber: '+123 4567 890',
     emergencyContact: '+123 4567 890',
@@ -32,7 +35,11 @@ const UserProfile: React.FC = () => {
 
   const handleEdit = (field: keyof UserData) => {
     setEditingField(field);
-    setEditValue(userData[field]);
+    if (field === 'dateOfBirth' && userData[field] !== '27/08/1998') {
+      setEditValue(new Date(userData[field]).toISOString().split('T')[0]);
+    } else {
+      setEditValue(userData[field]);
+    }
   };
 
   const handleSave = () => {
@@ -75,39 +82,48 @@ const UserProfile: React.FC = () => {
             </div>
             <nav className="space-y-4">
               {[
-                { icon: User, text: 'Personal Info' },
-                { icon: CreditCard, text: 'Payments and Payouts' },
-                { icon: Shield, text: 'Security and Settings' },
-                { icon: HelpCircle, text: 'Help and Feedback' },
+                { icon: User, text: 'Personal Info', href: '/personal-info' },
+                { icon: CreditCard, text: 'Payments and Payouts', href: '/payments-payouts' },
+                { icon: Shield, text: 'Security and Settings', href: '/security-settings' },
+                { icon: HelpCircle, text: 'Help and Feedback', href: '/help-feedback' },
               ].map((item, index) => (
-                <button key={index} className="flex items-center space-x-2 w-full p-3 bg-white rounded shadow text-sm">
+                <Link key={index} href={item.href} className="flex items-center space-x-2 w-full px-3 py-7 rounded border text-sm">
                   <item.icon size={20} />
                   <span>{item.text}</span>
-                </button>
+                </Link>
               ))}
             </nav>
-            <button className="text-blue-500 mt-8 text-sm">Sign Out</button>
+            <button className="w-full text-blue-500 mt-8 text-center text-sm flex justify-center items-center">Sign Out</button>
           </div>
           <div className="w-full md:w-2/3">
             <h1 className="text-2xl sm:text-3xl font-bold mb-2">Hi, {userData.name}</h1>
             <p className="text-gray-600 mb-6 text-sm">{userData.email}</p>
-            <div className="bg-white shadow rounded-lg p-4 sm:p-6">
+            <div className="border shadow rounded-lg p-4 sm:p-6">
               <h2 className="text-lg sm:text-xl font-semibold mb-4">Personal Info</h2>
               <p className="text-xs sm:text-sm text-gray-600 mb-6">Make sure your information matches your Travel Id, like your Passport or license</p>
               {Object.entries(userData).map(([key, value]) => (
                 key !== 'name' && key !== 'email' && (
                   <div key={key} className="mb-4 flex flex-col sm:flex-row sm:justify-between sm:items-center">
                     <div className="mb-2 sm:mb-0">
-                      <p className="text-xs sm:text-sm text-gray-600">{key.replace(/([A-Z])/g, ' $1').trim()}</p>
+                      <p className="text-xs sm:text-sm font-semibold text-gray-600">{key.replace(/([A-Z])/g, ' $1').trim()}</p>
                       {editingField === key ? (
-                        <input
-                          type="text"
-                          value={editValue}
-                          onChange={(e) => setEditValue(e.target.value)}
-                          className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                        />
+                        key === 'dateOfBirth' ? (
+                          <DatePicker
+                            selected={editValue ? new Date(editValue) : null}
+                            onChange={(date: Date) => setEditValue(date.toISOString().split('T')[0])}
+                            dateFormat="yyyy-MM-dd"
+                            className="mt-1 block w-full p-4 border border-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                          />
+                        ) : (
+                          <input
+                            type="text"
+                            value={editValue}
+                            onChange={(e) => setEditValue(e.target.value)}
+                            className="mt-1 block w-full p-4 border border-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                          />
+                        )
                       ) : (
-                        <p className="font-medium text-sm">{value}</p>
+                        <p className="font-medium text-md">{value}</p>
                       )}
                     </div>
                     <div className="flex items-center space-x-2">
@@ -133,7 +149,7 @@ const UserProfile: React.FC = () => {
                 )
               ))}
             </div>
-          </div>
+          </div> 
         </div>
       </main>
     </div>

@@ -46,7 +46,7 @@ export default function SearchBar() {
   }
 
   return (
-    <div className="flex  items-center justify-center w-full max-w-4xl mx-auto">
+    <div className="flex  items-center justify-center  w-full rounded-full max-w-4xl mx-auto">
       <div className="flex w-full items-center bg-white rounded-full shadow-lg overflow-hidden">
         <Popover>
           <PopoverTrigger asChild>

@@ -21,6 +21,14 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/Hero.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/components/Hero.jsx",
+    "src/app/pages/HostInformationForm.tsx",
+    "src/app/pages/PropertyBasicsForm/page.tsx"
+  ],
   "exclude": ["node_modules"]
 }

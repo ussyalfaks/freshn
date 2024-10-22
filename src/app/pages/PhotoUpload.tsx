@@ -3,9 +3,8 @@
 import { useState, useCallback } from 'react'
 import { useDropzone } from 'react-dropzone'
 import Image from 'next/image'
-import { 
-  // Upload,
-   X } from 'lucide-react'
+import {  X } from 'lucide-react'
+import HeaderAcc from './HeaderAcc'
 
 export default function PhotoUpload() {
   const [uploadedFiles, setUploadedFiles] = useState<File[]>([])
@@ -28,6 +27,8 @@ export default function PhotoUpload() {
   }
 
   return (
+   <>
+   <HeaderAcc/>
     <div className="max-w-6xl mx-auto p-6 rounded-lg bg-[#F9F9F9] ">
       <h1 className=" tracking-[1.5x] font-normal text-[24x] font-ebgaramond mb-4">Photos</h1>
       <h2 className="text-lg font-normal font-ebgaramond mb-2">Upload Photos</h2>
@@ -102,5 +103,6 @@ export default function PhotoUpload() {
           </button> 
            </div>
     </div>
+   </>
   )
 }

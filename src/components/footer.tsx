@@ -34,7 +34,7 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-blue-500 text-white mt-10 py-12">
+    <footer className="bg-secondary text-white mt-10 py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between mb-8">
           <div className="mb-8 md:mb-0 flex items-center">
@@ -45,7 +45,7 @@ export default function Footer() {
               height={30}
               className='mr-2 w-auto h-auto'
             />
-            <span className="text-2xl font-cinzel  font-bold">FRESHINN</span>
+            <span className="text-2xl font-cinzel font-bold">FRESHINN</span>
           </div>
 
           {/* Links */}

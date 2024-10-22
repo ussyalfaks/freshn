@@ -1,41 +1,102 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
-import { Heart, Star, ChevronDown, ChevronUp } from "lucide-react"
+import { Heart, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { CardContent } from "@/components/ui/card"
-import CategoriesTab from '@/components/Categories'
+import { ChevronDown, ChevronUp } from "lucide-react"
+import Link from 'next/link'
+
+
+
+
+
+
+
+
 
 const properties = [
-  {
-    id: 1,
-    images: ["/herobg.jpeg", "/img1.png", "/img2.png", "/img2.png" , "/img2.png"],
-    location: "Barnawa, Kaduna South",
-    name: "The Easton At Maleny - Hamptons Countryside Retreat",
-    rating: 4.8,
-    amenities: ["Ocean view", "Security Cameras", "gardens"],
-    price: 180
-  },
-  {
-    id: 2,
-    images: ["/herobg.jpeg", "/img1.png", "/img2.png", "/img2.png" , "/img2.png"],
-    location: "Barnawa, Kaduna South",
-    name: "The Easton At Maleny - Hamptons Countryside Retreat",
-    rating: 4.8,
-    amenities: ["Ocean view", "Security Cameras", "gardens"],
-    price: 180
-  },
-  {
-    id: 3,
-    images: ["/herobg.jpeg", "/img1.png", "/img2.png" , "/img2.png" , "/img2.png"],
-    location: "Barnawa, Kaduna South",
-    name: "The Easton At Maleny - Hamptons Countryside Retreat",
-    rating: 4.8,
-    amenities: ["Ocean view", "Security Cameras", "gardens"],
-    price: 180
-  },
-  // Add more properties here as needed
-]
+    {
+      id: 1,
+      images: ["/herobg.jpeg", "/img1.png", "/img2.png"],
+      location: "Barnawa, Kaduna South",
+      name: "The Easton At Maleny - Hamptons Countryside Retreat",
+      rating: 4.8,
+      amenities: ["Ocean view", "Security Cameras", "gardens"],
+      price: 180
+    },
+    {
+      id: 2,
+      images: ["/herobg.jpeg", "/img1.png","/img2.png"],
+      location: "Barnawa, Kaduna South",
+      name: "The Easton At Maleny - Hamptons Countryside Retreat",
+      rating: 4.8,
+      amenities: ["Ocean view", "Security Cameras", "gardens"],
+      price: 180
+    },
+    {
+      id: 3,
+      images: ["/herobg.jpeg", "/img1.png", "/img2.png"],
+      location: "Barnawa, Kaduna South",
+      name: "The Easton At Maleny - Hamptons Countryside Retreat",
+      rating: 4.8,
+      amenities: ["Ocean view", "Security Cameras", "gardens"],
+      price: 180
+    },
+    {
+      id: 4,
+      images: ["/herobg.jpeg", "/img1.png", "/img2.png"],
+      location: "Barnawa, Kaduna South",
+      name: "The Easton At Maleny - Hamptons Countryside Retreat",
+      rating: 4.8,
+      amenities: ["Ocean view", "Security Cameras", "gardens"],
+      price: 180
+    },
+    {
+      id: 5,
+      images: ["/herobg.jpeg", "/img1.png", "/img2.png"],
+      location: "Barnawa, Kaduna South",
+      name: "The Easton At Maleny - Hamptons Countryside Retreat",
+      rating: 4.8,
+      amenities: ["Ocean view", "Security Cameras", "gardens"],
+      price: 180
+    },
+    {
+      id: 6,
+      images: ["/herobg.jpeg", "/img1.png", "/img2.png"],
+      location: "Barnawa, Kaduna South",
+      name: "The Easton At Maleny - Hamptons Countryside Retreat",
+      rating: 4.8,
+      amenities: ["Ocean view", "Security Cameras", "gardens"],
+      price: 180
+    },
+    {
+      id: 7,
+      images: ["/herobg.jpeg", "/img1.png", "/img2.png"],
+      location: "Barnawa, Kaduna South",
+      name: "The Easton At Maleny - Hamptons Countryside Retreat",
+      rating: 4.8,
+      amenities: ["Ocean view", "Security Cameras", "gardens"],
+      price: 180
+    },
+    {
+      id: 8,
+      images: ["/herobg.jpeg", "/img1.png", "/img2.png"],
+      location: "Barnawa, Kaduna South",
+      name: "The Easton At Maleny - Hamptons Countryside Retreat",
+      rating: 4.8,
+      amenities: ["Ocean view", "Security Cameras", "gardens"],
+      price: 180
+    },
+    {
+      id: 9,
+      images: ["/herobg.jpeg", "/img1.png", "/img2.png"],
+      location: "Barnawa, Kaduna South",
+      name: "The Easton At Maleny - Hamptons Countryside Retreat",
+      rating: 4.8,
+      amenities: ["Ocean view", "Security Cameras", "gardens"],
+      price: 180
+    },
+  ]
 
 interface ImageCarouselProps {
   images: string[]
@@ -43,20 +104,20 @@ interface ImageCarouselProps {
 }
 
 function ImageCarousel({ images, autoplayInterval = 3000 }: ImageCarouselProps) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
+  }
 
   useEffect(() => {
-    const intervalId = setInterval(nextImage, autoplayInterval);
-    return () => clearInterval(intervalId);
-  }, [autoplayInterval, images.length]);
+    const intervalId = setInterval(nextImage, autoplayInterval)
+    return () => clearInterval(intervalId)
+  }, [autoplayInterval, images.length])
 
   return (
     <>
-       <div className="relative w-full h-48">
+      <div className="relative w-full h-48">
         <Image 
           src={images[currentIndex]} 
           alt={`Property Image ${currentIndex + 1}`}
@@ -65,20 +126,13 @@ function ImageCarousel({ images, autoplayInterval = 3000 }: ImageCarouselProps) 
           className="rounded-lg"
         />
       </div>
-
       <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1">
-        {images.slice(0, 4).map((_, index) => (
+        {images.map((_, index) => (
           <div 
             key={index} 
-            className={`w-2 h-2 rounded-[2px] ${index === currentIndex ? 'bg-gray-500' : 'bg-white border'}`}
+            className={`w-2 h-2 ${index === currentIndex ? 'rounded-[2px] bg-gray-500' : ' rounded-[2px] bg-white border'}`}
           />
         ))}
-
-        {images.length > 4 && (
-          <div
-            className={`w-1 h-1 my-auto rounded-[2px] ${currentIndex >= 3 ? 'bg-gray-500' : 'bg-white border'}`}
-          />
-        )}
       </div>
     </>
   )
@@ -95,9 +149,9 @@ export default function PropertyListing() {
 
   return (
     <div className="container mb-4 mx-auto px-4">
-      <CategoriesTab />
+      <h2 className='text-2xl font-cinzel mb-6'>New Listings</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      {visibleProperties.map((property) => (
+        {visibleProperties.map((property) => (
           <div key={property.id} className="overflow-hidden">
             <CardContent className="p-0 relative">
               <ImageCarousel images={property.images} />
@@ -129,7 +183,7 @@ export default function PropertyListing() {
             </div>
             <div className="flex justify-between items-center p-4">
               <p className="font-bold">${property.price} <span className="font-normal text-sm">/ night</span></p>
-              <Link href="/Roomdetails">
+               <Link href="/Roomdetails">
                <button className="rounded-full bg-secondary p-4 text-white m-1">Book Now</button>
                </Link>
             </div>

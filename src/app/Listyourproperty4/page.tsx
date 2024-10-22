@@ -1,14 +1,16 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Calendar } from "@/components/ui/calendar"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { CalendarIcon, ChevronDown } from 'lucide-react'
 import { format } from 'date-fns'
+import HeaderAcc from '@/components/HeaderAcc'
 
-export default function PricingAvailabilityForm() {
+export default function Listyourproperty4() {
   const [price, setPrice] = useState('')
   const [currency, setCurrency] = useState('NGN')
   const [availableDate, setAvailableDate] = useState<Date | undefined>(undefined)
@@ -22,6 +24,8 @@ export default function PricingAvailabilityForm() {
   }
 
   return (
+   <>
+   <HeaderAcc/>
     <form onSubmit={handleSubmit} className="max-w-6xl mx-auto p-2">
       <h1 className="text-2xl font-normal mb-6">Pricing Information</h1>
       
@@ -68,10 +72,10 @@ export default function PricingAvailabilityForm() {
                   <Button
                     type="button"
                     variant="outline"
-                    className={`w-full justify-start text-left font-normal py-6 ${!availableDate && "text-muted-foreground"}`}
+                    className={`w-full bg-[#F9F9F9] rounded-md justify-start text-left font-normal py-6 ${!availableDate && "text-muted-foreground"}`}
                   >
                     <CalendarIcon className="mr-2 h-4 w-4" />
-                    {availableDate ? format(availableDate, "PPP") : <span>Pick a date</span>}
+                    {availableDate ? format(availableDate, "PPP") : <span className='text-notgray  '>Pick a date</span>}
                   </Button>
                 </PopoverTrigger>
                 <PopoverContent className="w-auto p-0">
@@ -94,7 +98,7 @@ export default function PricingAvailabilityForm() {
                   id="min-stay"
                   value={minStay}
                   onChange={(e) => setMinStay(e.target.value)}
-                  className="w-full py-4 px-3 border rounded-md appearance-none"
+                  className="w-full py-4 px-3 border text-notgray  bg-[#F9F9F9] rounded-md appearance-none"
                 >
                   <option value="">Input minimum stay</option>
                   {[1, 2, 3, 4, 5, 6, 7, 14, 30].map((days) => (
@@ -116,7 +120,7 @@ export default function PricingAvailabilityForm() {
                   id="max-stay"
                   value={maxStay}
                   onChange={(e) => setMaxStay(e.target.value)}
-                  className="w-full py-4 px-3 border rounded-md appearance-none"
+                  className="w-full py-4 px-3 border text-notgray  bg-[#F9F9F9] rounded-md appearance-none"
                 >
                   <option value="">Input maximum stay</option>
                   {[7, 14, 30, 60, 90, 180, 365].map((days) => (
@@ -134,13 +138,24 @@ export default function PricingAvailabilityForm() {
 
       <div className="flex justify-end space-x-4  mb-3 mt-7 items-center">
         <p className="text-gray-500">4/6</p>
-        <Button type="button" variant="outline" className="px-4 py-2 bg-[#F5F5F5] text-[#2A2A2A] rounded-lg">
-          &larr; Previous
-        </Button>
-        <Button type="submit" className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
-          Next &rarr;
-        </Button>
+        <Link href="/Listyourproperty3">
+    <button
+      type="button"
+      className="px-4 py-2 bg-[#F5F5F5] text-[#2A2A2A] rounded-lg">
+      &larr; Previous
+    </button>
+  </Link>
+
+  <Link href="/Listyourproperty5">
+    <button
+      type="button"
+      className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+      Next &rarr;
+    </button>
+  </Link>
       </div>
     </form>
+   
+   </>
   )
 }

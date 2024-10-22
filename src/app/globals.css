@@ -152,3 +152,6 @@ body
     text-decoration: none;
     display: block;
   }
+  ::placeholder {
+    color: #F9F9F9;
+  }

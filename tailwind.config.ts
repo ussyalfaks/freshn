@@ -58,6 +58,14 @@ const config: Config = {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+	function (/** @type {import('tailwindcss/types/config').PluginAPI} */ { addBase }) {
+		addBase({
+		  'input, select': {
+			'@apply outline-none': {},
+		  },
+		});
+	  },
+  ],
 };
 export default config;
