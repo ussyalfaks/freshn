@@ -2,7 +2,17 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 import Link from 'next/link';
-import { Star, Share, MoveLeft, MapPin, Wifi, Car, Key, ChevronDown, ChevronUp } from 'lucide-react'
+import { Star, MoveLeft, MapPin, Wifi, Car, Key, ChevronDown, ChevronUp } from 'lucide-react'
+
+import Share from '../../../public/ShareIcon.svg';
+import Kitchen from '../../../public/KitchenIcon.svg';
+import Backyard from '../../../public/BackyardIcon.svg';
+import Parking from '../../../public/ParkingIcon.svg';
+import GardenView from '../../../public/GardenViewIcon.svg';
+import Workspace from '../../../public/WorkspaceIcon.svg';
+import WIFI from '../../../public/WIFIIcon.svg';
+
+
 
 
 export default function PropertyListing() {
@@ -12,12 +22,13 @@ export default function PropertyListing() {
     setIsExpanded(!isExpanded);
   }
   const amenities = [
-    { icon: Share, text: 'Exterior security cameras on property' },
-    { icon: Share, text: 'Kitchen' },
-    { icon: Share, text: 'Private backyard - Fully fenced' },
-    { icon: Share, text: 'Free parking on premises' },
-    { icon: Share, text: 'Garden view' },
-    { icon: Share, text: 'Dedicated workspace' },
+  { icon: Share, text: 'Exterior security cameras on property' },
+  { icon: Kitchen, text: 'Kitchen' },
+  { icon: Backyard, text: 'Private backyard - Fully fenced' },
+  { icon: Parking, text: 'Free parking on premises' },
+  { icon: GardenView, text: 'Garden view' },
+  { icon: Workspace, text: 'Dedicated workspace' },
+  { icon: WIFI, text: 'Wifi' },
   ];
 
   const features = [
@@ -181,8 +192,8 @@ export default function PropertyListing() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
             {amenities.map((item, index) => (
               <div key={index} className="flex items-center font-extralight ">
-                <div className="w-8 h-8 mr-4 flex items-center justify-center bg-muted rounded-full">
-                  <item.icon className="w-4 h-4" />
+                <div className="w-8 h-8 mr-4 flex items-center justify-center rounded-full">
+                  <item.icon className="w-full h-full" />
                 </div>
                 <span>{item.text}</span>
               </div>

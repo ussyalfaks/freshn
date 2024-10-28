@@ -16,7 +16,7 @@ export default function Homepage() {
        
       
       <main>
-           <Hero /> 
+        <Hero /> 
          <PropertyListing /> 
          <TopDestination /> 
         <Newlistings />  
