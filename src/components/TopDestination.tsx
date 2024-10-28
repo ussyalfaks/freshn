@@ -19,7 +19,7 @@ export default function TopDestination() {
               alt={`${destination.name} cityscape`}
               width={400}
               height={450}
-              className="w-full h-60"
+              className="w-full h-60 object-cover"
             />
             <div className="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white px-3 py-2 rounded-full">
               <div className="flex items-center">

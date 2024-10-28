@@ -23,8 +23,7 @@ export default function Hero() {
   return (
     <div className="relative opacity-95 z-50 h-[600px] bg-gray-100">
       <div
-        className="absolute inset-0 bg-cover bg-center -z-10"
-        style={{ backgroundImage: "url('/herobg.jpeg')" }}
+        className="herobg absolute inset-0 bg-cover bg-center -z-10"
       ></div>
       <div className="absolute inset-0 bg-[#0d213b80] opacity-50"></div>
 

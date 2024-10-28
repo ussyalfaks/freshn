@@ -2,7 +2,9 @@
 
 import Image from 'next/image'
 import React, { useState } from 'react'
-import { Star, ArrowLeft, MapPin, X, ChevronLeft, ChevronRight } from 'lucide-react'
+import Link from 'next/link';
+import { Star, MoveLeft, MapPin, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import Footer from '@/components/footer';
 
 export default function RoomPhotos() {
   const [photoIndex, setPhotoIndex] = useState(0)
@@ -42,10 +44,11 @@ export default function RoomPhotos() {
   }
 
   return (
+   <>
     <div className="max-w-7xl mx-auto px-4 py-8">
       <div className="mb-6">
         <div className="flex items-center mb-2">
-          <ArrowLeft size={20} className="text-gray-400 mr-5 cursor-pointer" />
+          <Link href='/Roomdetails'><MoveLeft size={15} className='text-gray-400 mr-5 cursor-pointer'/></Link>
           <h1 className="text-2xl md:text-3xl font-bold">3-Bedroom Around Barnawa GRA</h1>
         </div>
         <div className="flex flex-wrap items-center text-sm md:text-base text-secondary">
@@ -143,5 +146,7 @@ export default function RoomPhotos() {
         </button>
       </div>
     </div>
+    <Footer/>
+   </>
   )
 }

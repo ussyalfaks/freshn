@@ -1,3 +1,4 @@
+"use client"
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Heart, Star } from "lucide-react"
@@ -9,15 +10,10 @@ import Link from 'next/link'
 
 
 
-
-
-
-
-
 const properties = [
     {
       id: 1,
-      images: ["/herobg.jpeg", "/img1.png", "/img2.png"],
+      images: [ "/img23.jpg", "/img25.jpg" , "/img22.jpg" , "/img24.jpg"],
       location: "Barnawa, Kaduna South",
       name: "The Easton At Maleny - Hamptons Countryside Retreat",
       rating: 4.8,
@@ -26,7 +22,7 @@ const properties = [
     },
     {
       id: 2,
-      images: ["/herobg.jpeg", "/img1.png","/img2.png"],
+      images: ["/img22.jpg" , "/img22.jpg" ,"/img23.jpg" ,"/img25.jpg" ,],
       location: "Barnawa, Kaduna South",
       name: "The Easton At Maleny - Hamptons Countryside Retreat",
       rating: 4.8,
@@ -35,7 +31,7 @@ const properties = [
     },
     {
       id: 3,
-      images: ["/herobg.jpeg", "/img1.png", "/img2.png"],
+      images: ["/img24.jpg" ,"/img25.jpg" ,"/herobg.jpeg", "/img23.jpg" ,],
       location: "Barnawa, Kaduna South",
       name: "The Easton At Maleny - Hamptons Countryside Retreat",
       rating: 4.8,
@@ -44,7 +40,7 @@ const properties = [
     },
     {
       id: 4,
-      images: ["/herobg.jpeg", "/img1.png", "/img2.png"],
+      images: ["/img23.jpg", "/img1.png", "/img22.jpg"],
       location: "Barnawa, Kaduna South",
       name: "The Easton At Maleny - Hamptons Countryside Retreat",
       rating: 4.8,
@@ -53,7 +49,7 @@ const properties = [
     },
     {
       id: 5,
-      images: ["/herobg.jpeg", "/img1.png", "/img2.png"],
+      images: ["/herobg.jpeg", "/img1.png", "/img22.jpg"],
       location: "Barnawa, Kaduna South",
       name: "The Easton At Maleny - Hamptons Countryside Retreat",
       rating: 4.8,
@@ -62,7 +58,7 @@ const properties = [
     },
     {
       id: 6,
-      images: ["/herobg.jpeg", "/img1.png", "/img2.png"],
+      images: [ "/img1.png","/herobg.jpeg", "/img22.jpg"],
       location: "Barnawa, Kaduna South",
       name: "The Easton At Maleny - Hamptons Countryside Retreat",
       rating: 4.8,
@@ -71,7 +67,7 @@ const properties = [
     },
     {
       id: 7,
-      images: ["/herobg.jpeg", "/img1.png", "/img2.png"],
+      images: [ "/img1.png", "/img22.jpg", "/herobg.jpeg"],
       location: "Barnawa, Kaduna South",
       name: "The Easton At Maleny - Hamptons Countryside Retreat",
       rating: 4.8,
@@ -80,7 +76,7 @@ const properties = [
     },
     {
       id: 8,
-      images: ["/herobg.jpeg", "/img1.png", "/img2.png"],
+      images: ["/herobg.jpeg", "/img1.png", "/img22.jpg"],
       location: "Barnawa, Kaduna South",
       name: "The Easton At Maleny - Hamptons Countryside Retreat",
       rating: 4.8,
@@ -89,7 +85,7 @@ const properties = [
     },
     {
       id: 9,
-      images: ["/herobg.jpeg", "/img1.png", "/img2.png"],
+      images: ["/img22.jpg" , "/img23.jpg" , "/img22.jpg"],
       location: "Barnawa, Kaduna South",
       name: "The Easton At Maleny - Hamptons Countryside Retreat",
       rating: 4.8,
@@ -121,9 +117,8 @@ function ImageCarousel({ images, autoplayInterval = 3000 }: ImageCarouselProps) 
         <Image 
           src={images[currentIndex]} 
           alt={`Property Image ${currentIndex + 1}`}
-          layout="fill"
-          objectFit="cover"
-          className="rounded-lg"
+          layout='fill'
+          className="rounded-lg object-cover"
         />
       </div>
       <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1">

@@ -2,14 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronDown } from 'lucide-react'
 import { useState } from 'react';
-// import PropertyDetailsForm from './PropertyDetailsForm';
-//import PhotoUpload from '../components/PhotoUpload';
-// import PricingAvailabilityForm from '../components/PricingAvailabilityForm';
-//import HostInformationForm from '../components/HostInformationForm';
-
-// import SignUp from'./SignUp';
-// import CreatePasswordPage from './CreatePassword';
-
 
 
 

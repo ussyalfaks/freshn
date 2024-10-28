@@ -14,7 +14,7 @@ export default function SignUp() {
           Welcome to Freshinn
         </h2>
         <p className="mt-2 text-center text-sm text-gray-600">
-          Sign in or Create an account
+          Sign in or Create an account.
         </p>
       </div>
 

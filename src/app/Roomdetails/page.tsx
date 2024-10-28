@@ -1,11 +1,11 @@
 "use client";
 import Image from 'next/image'
 import React, { useState } from 'react'
+import Link from 'next/link';
 import { Star, Share, MoveLeft, MapPin, Wifi, Car, Key, ChevronDown, ChevronUp } from 'lucide-react'
 
 
 export default function PropertyListing() {
-
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpanded = () => {
@@ -42,7 +42,10 @@ export default function PropertyListing() {
     <div className="max-w-7xl mx-auto px-4 py-8">
        <div className="mb-6 flex flex-col">
          <div className='flex items-center'>
+          <Link href='/Homepage'>
          <MoveLeft size={15} className='text-gray-400 mr-5 cursor-pointer'/>
+          
+          </Link>
          <h1 className="text-xl md:text-3xl font-bold my-2">3-Bedroom Around Barnawa GRA</h1>
          </div>
          <div className="flex text-sm md:text-lg items-center my-4 text-secondary">
@@ -104,13 +107,16 @@ export default function PropertyListing() {
   </div>
 
   <div className="sm:col-span-1 row-span-2">
-    <Image
+   <Link href="/Roomphotos">
+   
+   <Image
       src="/img25.jpg"
       alt="Room 5"
       width={350}
       height={450}
       className="w-full h-full object-cover rounded-r-lg"
     />
+   </Link>
   </div>
  
 </div>
@@ -153,13 +159,12 @@ export default function PropertyListing() {
       ))}
     </div>
           <div>
-            
          <div className="mb-4 w-10/12">
         <p className="mb-4">
           The 3-Bedroom Around Barnawa GRA is located close to Narayi Junction. A car and driver will be provided for easy movements around the city.
         </p>
         <p className={`mb-4 transition-all ${isExpanded ? 'block' : 'line-clamp-2'}`}>
-          You can visit the museum and enjoy the beautiful landscape at Kaduna town. Easily connected to areas like Sabo market, Kakau, and more. Enjoy your stay at Helen's.
+          You can visit the museum and enjoy the beautiful landscape at Kaduna town. Easily connected to areas like Sabo market, Kakau, and more. Enjoy your stay at Helen&apos;s.
         </p>
         <button 
           onClick={toggleExpanded} 
@@ -175,7 +180,7 @@ export default function PropertyListing() {
           <h2 className="text-xl font-semibold mb-4">What this place offers</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
             {amenities.map((item, index) => (
-              <div key={index} className="flex items-center">
+              <div key={index} className="flex items-center font-extralight ">
                 <div className="w-8 h-8 mr-4 flex items-center justify-center bg-muted rounded-full">
                   <item.icon className="w-4 h-4" />
                 </div>
@@ -223,7 +228,9 @@ export default function PropertyListing() {
                        ))}
                     </select>
                      </div>
-            <button className="w-full rounded-3xl bg-secondary py-4 text-white text-md mb-4">Book Space</button>
+                     <Link href="ConfirmAndPay">
+                        <button className="w-full rounded-3xl bg-secondary py-4 text-white text-md mb-4">Book Space</button>
+                     </Link>
             <div className="text-md space-y-4">
               <div className="flex justify-between mb-2">
                 <span>$14 x 3 nights</span>

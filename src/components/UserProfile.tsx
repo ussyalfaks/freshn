@@ -23,7 +23,7 @@ const UserProfile: React.FC = () => {
     email: 'johnsmith@gmail.com',
     legalName: 'David Okpolo',
     preferredName: 'Dave',
-    dateOfBirth: '27/08/1998',
+    dateOfBirth: new Date('1998-08-27'),
     gender: 'Male',
     phoneNumber: '+123 4567 890',
     emergencyContact: '+123 4567 890',
@@ -31,20 +31,17 @@ const UserProfile: React.FC = () => {
   });
 
   const [editingField, setEditingField] = useState<keyof UserData | null>(null);
-  const [editValue, setEditValue] = useState('');
+  const [editValue, setEditValue] = useState<string | Date>('');
 
   const handleEdit = (field: keyof UserData) => {
     setEditingField(field);
-    if (field === 'dateOfBirth' && userData[field] !== '27/08/1998') {
-      setEditValue(new Date(userData[field]).toISOString().split('T')[0]);
-    } else {
-      setEditValue(userData[field]);
-    }
+    setEditValue(userData[field].toString());
   };
 
   const handleSave = () => {
     if (editingField) {
-      setUserData({ ...userData, [editingField]: editValue });
+      const updatedValue = editingField === 'dateOfBirth' ? new Date(editValue) : editValue;
+      setUserData({ ...userData, [editingField]: updatedValue as never });
       setEditingField(null);
     }
   };
@@ -81,17 +78,16 @@ const UserProfile: React.FC = () => {
               <button className="bg-blue-500 text-white px-4 py-2 rounded text-sm">Upload Image</button>
             </div>
             <nav className="space-y-4">
-              {[
-                { icon: User, text: 'Personal Info', href: '/personal-info' },
+              {[{ icon: User, text: 'Personal Info', href: '/personal-info' },
                 { icon: CreditCard, text: 'Payments and Payouts', href: '/payments-payouts' },
                 { icon: Shield, text: 'Security and Settings', href: '/security-settings' },
-                { icon: HelpCircle, text: 'Help and Feedback', href: '/help-feedback' },
-              ].map((item, index) => (
-                <Link key={index} href={item.href} className="flex items-center space-x-2 w-full px-3 py-7 rounded border text-sm">
-                  <item.icon size={20} />
-                  <span>{item.text}</span>
-                </Link>
-              ))}
+                { icon: HelpCircle, text: 'Help and Feedback', href: '/help-feedback' }]
+                .map((item, index) => (
+                  <Link key={index} href={item.href} className="flex items-center space-x-2 w-full px-3 py-7 rounded border text-sm">
+                    <item.icon size={20} />
+                    <span>{item.text}</span>
+                  </Link>
+                ))}
             </nav>
             <button className="w-full text-blue-500 mt-8 text-center text-sm flex justify-center items-center">Sign Out</button>
           </div>
@@ -109,15 +105,15 @@ const UserProfile: React.FC = () => {
                       {editingField === key ? (
                         key === 'dateOfBirth' ? (
                           <DatePicker
-                            selected={editValue ? new Date(editValue) : null}
-                            onChange={(date: Date) => setEditValue(date.toISOString().split('T')[0])}
+                            selected={typeof editValue === 'string' ? new Date(editValue) : editValue}
+                            onChange={(date: Date | null) => setEditValue(date || '')}
                             dateFormat="yyyy-MM-dd"
                             className="mt-1 block w-full p-4 border border-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                           />
                         ) : (
                           <input
                             type="text"
-                            value={editValue}
+                            value={typeof editValue === 'string' ? editValue : editValue.toString()}
                             onChange={(e) => setEditValue(e.target.value)}
                             className="mt-1 block w-full p-4 border border-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                           />
@@ -155,5 +151,6 @@ const UserProfile: React.FC = () => {
     </div>
   );
 };
+
 
 export default UserProfile;

@@ -46,7 +46,7 @@ export default function Listyourproperty3() {
         {/* <Upload className="mx-auto h-12 w-12 text-gray-400" /> */}
         <Image
                   src="/img_frame.svg"
-                  alt={`Upload photo `}y
+                  alt={`Upload photo `}
                   width={40}
                   height={40}
                   className="w-[40px] h-[40px] mx-auto"

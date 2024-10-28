@@ -9,7 +9,7 @@ import CategoriesTab from '@/components/Categories'
 const properties = [
   {
     id: 1,
-    images: ["/herobg.jpeg", "/img1.png", "/img2.png", "/img2.png" , "/img2.png"],
+    images: ["/herobg.jpeg", "/img22.jpg" , "/img23.jpg" , "/img2.png" , "/img25.jpg"],
     location: "Barnawa, Kaduna South",
     name: "The Easton At Maleny - Hamptons Countryside Retreat",
     rating: 4.8,
@@ -18,7 +18,7 @@ const properties = [
   },
   {
     id: 2,
-    images: ["/herobg.jpeg", "/img1.png", "/img2.png", "/img2.png" , "/img2.png"],
+    images: ["/img24.jpg" , "/img22.jpg" , "/img2.png", "/img2.png" , "/img2.png"],
     location: "Barnawa, Kaduna South",
     name: "The Easton At Maleny - Hamptons Countryside Retreat",
     rating: 4.8,
@@ -27,7 +27,23 @@ const properties = [
   },
   {
     id: 3,
-    images: ["/herobg.jpeg", "/img1.png", "/img2.png" , "/img2.png" , "/img2.png"],
+    images: [ "/img1.png", "/img24.jpg" , "/img23.jpg" , "/img25.jpg"],
+    location: "Barnawa, Kaduna South",
+    name: "The Easton At Maleny - Hamptons Countryside Retreat",
+    rating: 4.8,
+    amenities: ["Ocean view", "Security Cameras", "gardens"],
+    price: 180
+  }, {
+    id: 4,
+    images: [ "/img1.png", "/img23.jpg" , "/herobg.jpeg", "/img22.jpg" , "/img25.jpg"],
+    location: "Barnawa, Kaduna South",
+    name: "The Easton At Maleny - Hamptons Countryside Retreat",
+    rating: 4.8,
+    amenities: ["Ocean view", "Security Cameras", "gardens"],
+    price: 180
+  }, {
+    id: 5,
+    images: [ "/img25.jpg", "/img22.jpg" , "/img23.jpg" , "/img24.jpg"],
     location: "Barnawa, Kaduna South",
     name: "The Easton At Maleny - Hamptons Countryside Retreat",
     rating: 4.8,
