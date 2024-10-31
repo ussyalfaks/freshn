@@ -6,7 +6,7 @@ const Listyourproperty1 = () => {
   return (
     <>
       <HeaderAcc />
-      <div className="mx-auto max-w-6xl p-4">
+      <div className="mx-auto max-w-6xl p-4 Raleway">
         <h1 className="text-2xl font-normal mb-6">Property Basics</h1>
         <form>
           <div className="space-y-6">

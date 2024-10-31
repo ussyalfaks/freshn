@@ -84,33 +84,41 @@ export default function RoomPhotos() {
 
       {isOpen && (
         <div  className="fixed inset-0 bg-black bg-opacity-90 z-50 flex flex-col items-center justify-center">
-          <div className="relative w-full h-3/4 max-w-4xl">
-            <Image
-              src={photos[photoIndex]}
-              alt={`Room photo ${photoIndex + 1}`}
-              fill
-              objectFit="contain"
-            />
-            <button
-              className="absolute top-4 right-4 text-white hover:text-gray-300"
-              onClick={closeLightbox}
-            >
-              <X size={24} />
-            </button>
-            <button
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300"
-              onClick={goToPrevious}
-            >
-              <ChevronLeft size={24} />
-            </button>
-            <button
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300"
-              onClick={goToNext}
-            >
-              <ChevronRight size={24} />
-            </button>
-          </div>
-          <div className="flex space-x-2 mt-4 pb-2 md:max-w-4xl max-w-3xl">
+          <div className="relative w-full h-3/4 lg:max-w-4xl md:max-w-2xl sm:max-w-md max-w-sm mx-auto">
+  <Image
+    src={photos[photoIndex]}
+    alt={`Room photo ${photoIndex + 1}`}
+    fill
+    className="object-cover rounded-lg"
+  />
+
+  {/* Close button */}
+  <button
+    className="absolute top-4 -right-9 bg-gray-500 p-1 rounded-full text-white hover:text-gray-300"
+    onClick={closeLightbox}
+  >
+    <X size={24} />
+  </button>
+
+  {/* Previous button */}
+  <button
+    className="absolute -left-9 md:-left-10 top-1/2 transform -translate-y-1/2 bg-gray-500 p-2 rounded-full text-white hover:text-gray-300"
+    onClick={goToPrevious}
+  >
+    <ChevronLeft size={24} />
+  </button>
+
+  {/* Next button */}
+  <button
+    className="absolute -right-9 md:-right-10 top-1/2 transform -translate-y-1/2 bg-gray-500 p-2 rounded-full text-white hover:text-gray-300"
+    onClick={goToNext}
+  >
+    <ChevronRight size={24} />
+  </button>
+
+</div>
+
+          <div className="flex space-x-2 mt-4 pb-2 md:max-w-4xl max-w-2xl overflow-auto scrollbar-hide mx-5 md:mx-0">
             {photos.map((photo, index) => (
               <div
                 key={index}

@@ -4,7 +4,7 @@ import { Brain, MapPin } from 'lucide-react';
 
 const Recommendations = () => {
   return (
-    <div className="bg-secondary text-white py-9 px-24 max-md:p-5 md:mx-12 rounded-2xl">
+    <div className="bg-secondary text-white py-9 px-24 max-md:p-5 md:mx-12 rounded-none md:rounded-2xl">
       <div className="flex flex-col lg:flex-row items-center justify-between">
         
         {/* Left Section */}
@@ -19,13 +19,13 @@ const Recommendations = () => {
         {/* Image and Cards Section */}
         <div className="relative mb-5 w-full md:w-1/2 max-w-sm">
           {/* Image Container */}
-          <div className="rounded-2xl overflow-hidden ">
+          <div className="rounded-2xl  overflow-hidden ">
             <Image
               src="/recommendtion.png" 
               alt="Modern interior" 
               width={350}
               height={350}
-              className="object-cover w-80 h-80 "
+              className="object-cover hidden md:block w-80 h-80 "
             />
           </div>
 

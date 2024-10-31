@@ -46,16 +46,16 @@ export default function SearchBar() {
   }
 
   return (
-    <div className="flex  items-center justify-center  w-full rounded-full max-w-4xl mx-auto">
-      <div className="flex w-full items-center bg-white rounded-full shadow-lg overflow-hidden">
+    <div className="flex  items-center justify-center max-md:max-w-2xl  rounded-full max-w-3xl mx-auto">
+      <div className="flex w-full md:flex-row flex-col  border-2 rounded-xl py-6 px-4 md:py-2 md:px-2 border-gray-400 md:border-none items-center bg-none md:bg-white space-y-2 md:space-y-0 md:rounded-full shadow-lg overflow-hidden">
         <Popover>
           <PopoverTrigger asChild>
-            <div className="flex-1 px-4 py-2 cursor-pointer">
-              <div className="text-sm font-semibold text-gray-700 text-center">Place</div>
+            <div className="flex-1 items-center bg-white border-2 border-notgray md:border-none rounded-2xl  w-96 cursor-pointer">
+              <div className="text-sm  font-semibold text-gray-700 pl-8 pt-1 md:pl-0 md:pt-0 md:text-center">Place</div>
               <Input 
                 type="text" 
                 placeholder="Search Destination" 
-                className="border-none shadow-none text-sm placeholder:text-gray-400 text-center"
+                className="border-none outline-none pl-8 rounded-full shadow-none w-full text-sm placeholder:text-gray-400  md:text-center"
                 value={place}
                 onChange={(e) => setPlace(e.target.value)}
               />
@@ -70,12 +70,12 @@ export default function SearchBar() {
 
         <Popover>
           <PopoverTrigger asChild>
-            <div className="flex-1 px-4 py-2 cursor-pointer">
-              <div className="text-sm font-semibold text-gray-700 text-center">Date</div>
+            <div className="flex-1 items-center justify-start border-2 border-notgray md:border-none bg-white rounded-2xl w-96 cursor-pointer">
+              <div className="text-sm font-semibold text-gray-700 pl-8 pt-1 md:pl-0 md:pt-0 md:text-center">Date</div>
               <Input 
                 type="text" 
                 placeholder="Check in - Check out" 
-                className="border-none shadow-none text-sm placeholder:text-gray-400 text-center"
+                className="border-none outline-none pl-8 rounded-full shadow-none text-sm placeholder:text-gray-400 md:text-center"
                 value={dateInput}
                 onChange={handleDateChange}
               />
@@ -94,16 +94,16 @@ export default function SearchBar() {
           </PopoverContent>
         </Popover>
 
-        <div className="w-px bg-gray-200 self-stretch my-2" />
+        <div className="w-px bg-gray-200  my-2" />
 
         <Popover>
           <PopoverTrigger asChild>
-            <div className="flex-1 px-4 py-2 cursor-pointer">
-              <div className="text-sm font-semibold text-gray-700 text-center">Guests</div>
+            <div className="flex-1 bg-white rounded-2xl border-2 border-notgray md:border-none w-96 md:w-72 cursor-pointer">
+              <div className="text-sm font-semibold text-gray-700 pl-8 p-1 md:pl-0 md:pt-0 md:text-center">Guests</div>
               <Input 
                 type="text" 
                 placeholder="No. of Guests" 
-                className="border-none shadow-none text-sm placeholder:text-gray-400 text-center"
+                className="border-none outline-none pl-8 rounded-full shadow-none text-sm placeholder:text-gray-400 md:text-center"
                 value={guests}
                 onChange={(e) => setGuests(e.target.value)}
               />
@@ -114,7 +114,7 @@ export default function SearchBar() {
           </PopoverContent>
         </Popover>
 
-        <Button className="rounded-full bg-secondary hover:bg-secondary p-6 m-1" size="lg">
+        <Button className="rounded-full md:w-32 bg-secondary w-full hover:bg-blue-600 p-7 m-1" >
           <Search className="w-4 h-4 mr-2" />
           Search
         </Button>

@@ -144,7 +144,7 @@ export default function PropertyListing() {
         </div>
 
 
-      <div className="flex flex-col lg:flex-row gap-6">
+      <div className="flex flex-col lg:flex-row gap-9">
         <div className="flex-grow pr-9">
           <div className="flex justify-between items-start mb-6">
             <div className="flex items-center mb-6">
@@ -170,20 +170,23 @@ export default function PropertyListing() {
       ))}
     </div>
           <div>
-         <div className="mb-4 w-10/12">
-        <p className="mb-4">
+         <div className="mb-4 w-11/12">
+        <p className="mb-4 pr-4">
           The 3-Bedroom Around Barnawa GRA is located close to Narayi Junction. A car and driver will be provided for easy movements around the city.
         </p>
-        <p className={`mb-4 transition-all ${isExpanded ? 'block' : 'line-clamp-2'}`}>
+        <p className={`mb-4 transition-all pr-4 ${isExpanded ? 'block' : 'line-clamp-2'}`}>
+          You can visit the museum and enjoy the beautiful landscape at Kaduna town. Easily connected to areas like Sabo market, Kakau, and more. Enjoy your stay at Helen&apos;s.
           You can visit the museum and enjoy the beautiful landscape at Kaduna town. Easily connected to areas like Sabo market, Kakau, and more. Enjoy your stay at Helen&apos;s.
         </p>
+        <div className='flex justify-end'>
         <button 
           onClick={toggleExpanded} 
-          className="flex items-center text-blue-500 font-semibold cursor-pointer"
+          className="flex justify-end text-blue-500 font-semibold cursor-pointer"
         >
           {isExpanded ? 'Show Less' : 'Show More'}
-          {isExpanded ? <ChevronUp className="ml-1 w-4 h-4" /> : <ChevronDown className="mr-3 w-4 h-4" />}
+          {isExpanded ? <ChevronUp className="ml-3 w-4 h-4" /> : <ChevronDown className="ml-3 w-4 h-4" />}
         </button>
+        </div>
       </div>
 
           </div>
@@ -202,7 +205,7 @@ export default function PropertyListing() {
         </div>
 
         {/* Booking section responsive */}
-        <div className="w-full md:w-7/12">
+        <div className=" md:w-4/6 sm:w-full lg:w-full">
           <div className="border rounded-lg p-8">
             <div className="flex justify-between items-center mb-4">
               <div>

@@ -7,7 +7,7 @@ import { SlQuestion } from "react-icons/sl";
 export default function Header() {
   return (
     <>
-      <header className="flex justify-between items-center p-6 bg-background shadow-md">
+      <header className="flex justify-between z-50 items-center p-6 bg-background shadow-md">
         <Link href="/" className="text-2xl font-bold flex flex-row items-center font-serif">
           <Image
             src="/logo.png"

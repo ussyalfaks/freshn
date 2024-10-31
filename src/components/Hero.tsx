@@ -28,15 +28,15 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[#0d213b80] opacity-50"></div>
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-[#F9F9F9]">
-        <h1 className="font-ebgaramond text-4xl font-bold uppercase text-center mb-4">
+        <h1 className="ebgaramond px-3  text-4xl md:text-5xl font-bold uppercase text-center mb-4">
           Where comfort MEETS STYLE
         </h1>
-        <p className="text-md mb-8 font-raleway leading-normal">
+        <p className="text-md w-64 text-center md:w-full mb-8 font-raleway leading-normal">
           Book The Perfect Stay For Your Next Adventure
         </p>
 
         {/* Conditionally apply 'fixed' class based on scroll */}
-        <div className={`${isFixed ? 'fixed top-0 left-0 w-full z-50' : ''}`}>
+        <div className={`${isFixed ? 'md:fixed md:top-0 md:left-0 md:w-full md:z-50' : ''}`}>
           <SearchBar />
         </div>
       </div>

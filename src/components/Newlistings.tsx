@@ -113,7 +113,7 @@ function ImageCarousel({ images, autoplayInterval = 3000 }: ImageCarouselProps) 
 
   return (
     <>
-      <div className="relative w-full h-48">
+      <div className="relative w-full h-48 Raleway">
         <Image 
           src={images[currentIndex]} 
           alt={`Property Image ${currentIndex + 1}`}
@@ -143,7 +143,7 @@ export default function PropertyListing() {
   const visibleProperties = showMore ? properties : properties.slice(0, 8)
 
   return (
-    <div className="container mb-4 mx-auto px-4">
+    <div className="container mb-4 mx-auto px-8 md:px-4">
       <h2 className='text-2xl font-cinzel mb-6'>New Listings</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {visibleProperties.map((property) => (
