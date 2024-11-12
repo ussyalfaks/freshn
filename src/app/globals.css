@@ -161,3 +161,10 @@ body{
   input {
     outline: none;
   }
+
+  .bg-pattern {
+    background-image: url('../../public/pattern.png'); 
+    background-size: cover; 
+    background-color: #007FFF;
+    background-blend-mode:color-burn;
+  }
