@@ -34,7 +34,7 @@ export default function Header() {
               </li>
             </ul>
           </nav>
-          <Link href="/Listyourproperty1">
+          <Link href="/WelcomeDashboard">
             <button className="bg-secondary flex items-center font-semibold text-[#F9F9F9] rounded-full px-4 py-2">
               <PiUserCircle className="mr-2" size={30} aria-label="User Icon" />
               Sign In

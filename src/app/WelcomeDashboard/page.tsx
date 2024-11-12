@@ -1,7 +1,7 @@
 import React from 'react';
 import { Calendar, DoorOpen, Zap } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
+import Footer from '@/components/footer';
 
 
 
@@ -9,19 +9,19 @@ import Image from 'next/image';
 
 const Tips = [
     {
-        image: "/resource1.jpg",
+        image: "/resource1.png",
         title:  'How to get paid for hosting',
       },
       {
-        image: "/resource2.jpg",
+        image: "/resource2.png",
         title:  'How to set pricing strategy',
       },
       {
-        image: "/resource3.jpg",
+        image: "/resource3.png",
         title:  'Preparing your home for guest',
       },
       {
-        image: "/resource4.jpg",
+        image: "/resource4.png",
         title:  'Writing a listing description well',
       },
 ]
@@ -32,23 +32,28 @@ const WelcomeDashboard = () => {
    
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
+   <>
+ <div className="max-w-6xl mx-auto px-4 py-8">
       {/* Welcome Section */}
       <div className="mb-12">
         <h1 className="text-3xl font-bold mb-2">Welcome, Helen!</h1>
         <p className="text-gray-600">
-          Guests can reserve your place 24 hours after you publish - here &apos s how to prepare.
+          Guests can reserve your place 24 hours after you publish - here &apos s <span className='underline cursor-pointer'>how to prepare.</span>
         </p>
         
         {/* Important Details Cards */}
         <div className="grid md:grid-cols-2 gap-4 mt-6">
-          {[1, 2].map((item) => (
-            <div key={item} className="border rounded-lg p-4">
+            <div  className="border rounded-lg p-4">
               <h3 className="font-semibold mb-2">Complete important details</h3>
               <p className="text-sm text-gray-600 mb-3">Required to publish</p>
-              <button className="text-blue-500">Continue</button>
+              <button className="text-blue-500 underline">Continue</button>
             </div>
-          ))}
+
+            <div  className="border rounded-lg p-4">
+              <h3 className="font-semibold mb-2">Complete important details</h3>
+              <p className="text-sm text-gray-600 mb-3">Required to publish</p>
+              <button className="text-blue-500 underline">Continue</button>
+            </div>
         </div>
       </div>
 
@@ -85,18 +90,18 @@ const WelcomeDashboard = () => {
         <p className="text-gray-600 mb-4">Don &apos t hesitate to contact us when you need help</p>
         
         <div className="grid md:grid-cols-2 gap-4">
-          <Card>
-            <CardContent className="p-6">
+          <div>
+            <div className="p-6">
               <h3 className="font-semibold mb-2">Chat with Judith Andrew</h3>
               <p className="text-sm text-gray-600">Need some guidance? Reach out to your Superhost for information and tips.</p>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="p-6">
+            </div>
+          </div>
+          <div>
+            <div className="p-6">
               <h3 className="font-semibold mb-2">Contact specialized support</h3>
               <p className="text-sm text-gray-600">As a new Host, you get one-tap access to a specially trained support team.</p>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -110,19 +115,21 @@ const WelcomeDashboard = () => {
                 <Image
                   src={tip.image}
                   alt={tip.title}
-                  className="w-full h-full object-cover"
+                  className="w-96 h-80 h object-cover"
                   width={400}
                   height={300}
                 />
               </div>
-              <div className="absolute bottom-0 left-0 right-0 bg-white bg-opacity-90 p-3">
-                <p className="text-sm font-medium">{tip.title}</p>
+              <div className="absolute bottom-3 rounded-md left-3 right-3 bg-white bg-opacity-90 p-3">
+                <p className="text-sm font-semibold text-center">{tip.title}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
     </div>
+    <Footer />
+   </>
   );
 };
 
