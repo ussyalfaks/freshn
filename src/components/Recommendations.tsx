@@ -31,7 +31,7 @@ const Recommendations = () => {
 
           <div className="w-full md:absolute md:top-44 -right-16 max-md:-right-4 flex md:justify-center flex-col gap-4">
             {/* Card 1 */}
-            <div className="bg-white md:relative pr-5 pl-3 md:-left-12 text-black py-2 self-start md:self-center rounded-r-full md:rounded-full flex items-center shadow-lg">
+            <div className="bg-white md:relative pr-5 pl-3 md:pr-9 md:pl-3 md:-left-12 text-black py-2 self-start md:self-center rounded-r-full md:rounded-full flex items-center shadow-lg">
              <div className=" bg-orange-500 p-2 rounded-full m-1 flex justify-center items-center">
                <Brain className="w-6 h-6 text-white" />
                </div> 
@@ -44,7 +44,7 @@ const Recommendations = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="bg-white text-black py-2 px-3  md:pr-4 mr-0 md:mr-8 rounded-l-full md:self-center self-end md:rounded-full flex items-center shadow-lg">
+            <div className="bg-white text-black py-2 px-3  md:pr-9 mr-0 md:mr-8 rounded-l-full md:self-center self-end md:rounded-full flex items-center shadow-lg">
               <div className='bg-secondary rounded-full p-2 m-1 flex justify-center items-center'>
               <MapPin className="w-6 h-6 text-white" />
               </div>
