@@ -37,7 +37,7 @@ export default function Footer() {
     <footer className="bg-secondary text-white mt-10 py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between mb-8">
-          <div className="mb-8 md:mb-0 flex items-center">
+          <div className="mb-8 md:mb-0 flex justify-start items-center">
             <Image 
               src="/footerlogo.png"
               alt="Freshinn Logo"
@@ -49,7 +49,7 @@ export default function Footer() {
           </div>
 
           {/* Links */}
-          <div className="flex flex-wrap gap-10 justify-around">
+          <div className="flex flex-wrap-reverse gap-10 justify-around">
             {footerLinks.map((column) => (
               <div key={column.title}>
                 <h3 className="text-lg font-semibold mb-4">{column.title}</h3>

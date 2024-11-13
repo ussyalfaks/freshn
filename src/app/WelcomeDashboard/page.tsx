@@ -115,7 +115,7 @@ const WelcomeDashboard = () => {
                 <Image
                   src={tip.image}
                   alt={tip.title}
-                  className="w-96 h-80 h object-cover"
+                  className="w-96 h-72 h object-cover"
                   width={400}
                   height={300}
                 />
