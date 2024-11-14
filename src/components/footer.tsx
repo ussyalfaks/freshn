@@ -37,7 +37,7 @@ export default function Footer() {
     <footer className="bg-secondary text-white mt-10 py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between mb-8">
-          <div className="mb-8 md:mb-0 flex justify-start items-center">
+          <div className="mb-8 md:mb-0 flex justify-start items-start">
             <Image 
               src="/footerlogo.png"
               alt="Freshinn Logo"
