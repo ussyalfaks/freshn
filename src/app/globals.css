@@ -162,9 +162,17 @@ body{
     outline: none;
   }
 
-  .bg-pattern {
-    background-image: url('../../public/pattern.png'); 
-    background-size: cover; 
-    background-color: #007FFF;
-    background-blend-mode:color-burn;
-  }
+  
+.bg-soft {
+  background-image: url('/Softlight.png');
+  background-size: cover;
+  background-color: #007FFF;
+  background-blend-mode: color-burn;
+}
+.bg-pattern {
+  display: block;
+  background-image: url('/pattern.png');
+  background-size: cover;
+  background-color: #007FFF;
+  background-blend-mode: color-burn;
+}

@@ -49,7 +49,7 @@ export default function Footer() {
           </div>
 
           {/* Links */}
-          <div className="flex flex-wrap-reverse gap-10 justify-around">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-10 justify-around">
             {footerLinks.map((column) => (
               <div key={column.title}>
                 <h3 className="text-lg font-semibold mb-4">{column.title}</h3>

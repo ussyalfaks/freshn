@@ -1,10 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Brain, MapPin } from 'lucide-react';
 
 const Recommendations = () => {
+  const [bgClass, setBgClass] = useState('bg-soft'); // Default to `bg-soft`
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setBgClass('bg-pattern'); // Use `bg-pattern` on medium and larger screens
+      } else {
+        setBgClass('bg-soft'); // Use `bg-soft` on small screens
+      }
+    };
+
+    // Set initial background based on the current window size
+    handleResize();
+
+    // Listen for window resize events
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
-    <div className="bg-pattern text-white md:py-9 md:px-20 md:mx-12 rounded-none md:rounded-2xl">
+    <div className={`${bgClass} text-white md:py-9 md:px-20 md:mx-12 rounded-none md:rounded-2xl `}>
       <div className="flex flex-col lg:flex-row md:items-center justify-between">
         
         {/* Left Section */}
