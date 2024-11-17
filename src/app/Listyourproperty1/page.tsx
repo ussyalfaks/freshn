@@ -1,12 +1,14 @@
 "use client";
 
 import { ArrowLeft } from 'lucide-react'
-import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import Link from 'next/link';
 
-export default function Component({ currentStep = 1, totalSteps = 6 }: { currentStep: number; totalSteps: number }) {
+export default function Listyourproperty1 ({ currentStep = 1, totalSteps = 6 }: { currentStep: number; totalSteps: number }) {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className='bg-[#FFFFFF] h-full'>
+
+<div className= "container mx-auto px-4 py-8">
       <div className="mb-8">
         <div className="flex h-2 rounded-full overflow-hidden">
           {Array.from({ length: totalSteps }, (_, i) => (
@@ -14,10 +16,10 @@ export default function Component({ currentStep = 1, totalSteps = 6 }: { current
               key={i} 
               className={`flex-1 ${
                 i < currentStep 
-                  ? 'bg-blue-500' 
+                  ? 'bg-blue-500 rounded-full' 
                   : i === currentStep 
-                    ? 'bg-blue-300' 
-                    : 'bg-gray-200'
+                    ? 'bg-gray-200 rounded-full' 
+                    : 'bg-gray-200 rounded-full'
               } ${i > 0 ? 'ml-1' : ''}`}
             ></div>
           ))}
@@ -26,33 +28,38 @@ export default function Component({ currentStep = 1, totalSteps = 6 }: { current
       
       <div className="flex justify-between items-center mb-8">
         <button className="text-gray-600">
+        <Link href="/">
           <ArrowLeft className="h-6 w-6" />
+          </Link>
         </button>
-        <div className="space-x-4">
-          <Button variant="outline">Save as Draft</Button>
-          <Button>Continue</Button>
+        <div className="space-x-8 flex">
+          <button className='rounded-full p-4 font-semibold border'>Save as Draft</button>
+          <Link href="/Listyourproperty2" > 
+          <button className='bg-secondary text-white py-4 px-6 rounded-full'>Continue</button>
+          </Link>
         </div>
       </div>
 
-      <div className="max-w-2xl mx-auto">
-        <h2 className="text-2xl font-bold mb-4">List your Property</h2>
+      <div className="max-w-2xl lg:ml-56">
+        <h2 className="text-md mb-4">List your Property</h2>
         <h1 className="text-3xl font-bold mb-4">What is the name of your property?</h1>
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-600 mb-8">
           This is the house name your guests will see. Your billing and legal name can be added later.
         </p>
 
         <div className="space-y-4">
-          <label htmlFor="propertyName" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="propertyName" className="block text-sm font-semibold text-gray-700">
             Accommodation name
           </label>
           <Input 
             type="text" 
             id="propertyName" 
             placeholder="Type in property name" 
-            className="w-full"
+            className="w-11/12 rounded-xl py-6 focus:border-notgray"
           />
         </div>
       </div>
+    </div>
     </div>
   )
 }
