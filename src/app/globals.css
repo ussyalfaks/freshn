@@ -133,10 +133,23 @@
   scrollbar-width: none;
 }
 
+@layer utilities {
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: #dbeafe;
+    border-radius: 50px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: #3b82f6;
+    border-radius: 50px;
+  }
+}
 
 body{
-  margin: 0;
-  padding: 0;
+  margin: 0%;
+  padding: 0%;
   font-family: Raleway;
   overflow-x: hidden;
   background-color: #F9F9F9;
@@ -175,4 +188,8 @@ body{
   background-size: cover;
   background-color: #007FFF;
   background-blend-mode: color-burn;
+}
+
+.mapbg{
+  background-image: url(../../public/Map.png);
 }
