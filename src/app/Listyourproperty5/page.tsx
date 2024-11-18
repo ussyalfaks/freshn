@@ -58,13 +58,13 @@ export default function Listyourproperty5({ currentStep = 5, totalSteps = 6 }: {
       {/* Navigation */}
       <div className="flex justify-between items-center mb-8">
         <button className="text-gray-600">
-        <Link href="/Listyourproperty3">
+        <Link href="/Listyourproperty4">
           <ArrowLeft className="h-6 w-6" />
           </Link>
         </button>
         <div className="space-x-8 flex">
           <button className='rounded-full p-4 font-semibold border'>Save as Draft</button>
-          <Link href="/Listyourproperty5" > 
+          <Link href="/Listyourproperty6" > 
           <button disabled={uploadedImages.length < 5} className='bg-secondary text-white py-4 px-6 rounded-full'>
             Continue</button>
           </Link>

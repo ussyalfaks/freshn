@@ -13,7 +13,7 @@ export default function TopDestination() {
       <h2 className="text-2xl font-cinzel mb-6">Top Destinations</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {destinations.map((destination) => (
-          <div key={destination.name} className="relative rounded-lg overflow-hidden ">
+          <div key={destination.name} className="relative rounded-lg overflow-hidden">
             <Image
               src={destination.image}
               alt={`${destination.name} cityscape`}

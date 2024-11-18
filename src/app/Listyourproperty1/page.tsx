@@ -7,8 +7,7 @@ import Link from 'next/link';
 export default function Listyourproperty1 ({ currentStep = 1, totalSteps = 6 }: { currentStep: number; totalSteps: number }) {
   return (
     <div className='bg-[#FFFFFF] h-full'>
-
-<div className= "container mx-auto px-4 py-8">
+<div className= "container mx-auto px-4 py-8 h-screen">
       <div className="mb-8">
         <div className="flex h-2 rounded-full overflow-hidden">
           {Array.from({ length: totalSteps }, (_, i) => (
