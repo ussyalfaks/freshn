@@ -66,9 +66,9 @@ const BookingPreview: React.FC = () => {
             </div>
 
             <p className="text-sm text-center text-gray-500 my-7">
-              I agree to the <strong className='underline'>Host's House Rules,</strong>  <strong className='underline'>Ground Rules for guests,</strong> 
-              <strong className='underline'>Freshinn's Rebooking and Refund Policy,</strong>  
-              <strong className='underline'>Pay Less Upfront Terms,</strong> and that Freshinn can <strong className='underline'>charge my payment method</strong> if I'm responsible for damages.
+              I agree to the <strong className='underline'>Host&apos;s House Rules,</strong>  <strong className='underline'>Ground Rules for guests,</strong> 
+              <strong className='underline'>Freshinn&apos;s Rebooking and Refund Policy,</strong>  
+              <strong className='underline'>Pay Less Upfront Terms,</strong> and that Freshinn can <strong className='underline'>charge my payment method</strong> if I&apos;m responsible for damages.
             </p>
             <div className="flex items-center justify-around mt-6 gap-8">
               <button className=" w-full p-5 border border-gray-700 text-gray-700 rounded-full ">Cancel Booking</button>
@@ -82,7 +82,7 @@ const BookingPreview: React.FC = () => {
      <div className='flex-1 mx-auto  md:mt-14'>
      <div className=" w-full flex items-center justify-between p-4 border rounded-lg text-sm">
         <div>
-        <p className='font-semibold'>You have successfully booked the entire rental room of "Blue Haven: New 2Br Apt w/ Private Terrace" hosted by Helen.</p>
+        <p className='font-semibold'>You have successfully booked the entire rental room of ``Blue Haven: New 2Br Apt w/ Private Terrace hosted by Helen.</p>
         <p className="mt-2">
           If you have any questions or need to contact the host about the venue, you can contact Helen <a href="#" className="text-blue-500">here</a>.
         </p>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Heart, Star, ChevronDown, ChevronUp } from "lucide-react"
@@ -61,14 +61,14 @@ interface ImageCarouselProps {
 function ImageCarousel({ images, autoplayInterval = 3000 }: ImageCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextImage = () => {
+  const nextImage = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+  }, [images.length]); 
 
   useEffect(() => {
     const intervalId = setInterval(nextImage, autoplayInterval);
-    return () => clearInterval(intervalId);
-  }, [autoplayInterval, images.length]);
+    return () => clearInterval(intervalId); 
+  }, [autoplayInterval, nextImage]);
 
   return (
     <>

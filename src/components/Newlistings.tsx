@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import { Heart, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -102,14 +102,14 @@ interface ImageCarouselProps {
 function ImageCarousel({ images, autoplayInterval = 3000 }: ImageCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
-  const nextImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
-  }
+  const nextImage = useCallback(() => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  }, [images.length]); 
 
   useEffect(() => {
-    const intervalId = setInterval(nextImage, autoplayInterval)
-    return () => clearInterval(intervalId)
-  }, [autoplayInterval, images.length])
+    const intervalId = setInterval(nextImage, autoplayInterval);
+    return () => clearInterval(intervalId); 
+  }, [autoplayInterval, nextImage]);
 
   return (
     <>

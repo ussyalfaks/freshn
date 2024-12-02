@@ -36,7 +36,7 @@
     "src/components/Hero.tsx",
     "src/app/pages/HostInformationForm.tsx",
     "src/app/pages/PropertyBasicsForm/page.tsx"
-  ],
+, "src/app/Listyourproperty7"  ],
   "exclude": [
     "node_modules"
   ]
