@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { PiUserCircle } from "react-icons/pi";
 import { TbWorld } from "react-icons/tb";
 import { SlQuestion } from "react-icons/sl";
+import Logo from "../../public/Logo.png"
 
 export default function Header() {
   return (
@@ -10,7 +11,7 @@ export default function Header() {
       <header className="flex justify-between z-50 items-center p-6 bg-background shadow-md">
         <Link href="/" className="text-2xl font-bold flex flex-row items-center font-serif">
           <Image
-            src="/logo.png"
+            src={Logo}
             alt="Freshinn Logo"
             width={30}
             height={30}
