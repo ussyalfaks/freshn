@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Calendar, DoorOpen, Zap, CircleAlert } from 'lucide-react';
 import { TbRosetteDiscountCheckFilled } from "react-icons/tb";
 import Image from 'next/image';
+import Link from 'next/link';
 import Footer from '@/components/footer';
 
 const Tips = [
@@ -75,9 +76,11 @@ const WelcomeDashboard = () => {
               <p className="text-sm text-gray-600">Change the available dates</p>
             </div>
             <div className="border p-4 rounded-xl">
+              <Link href="HouseRules">
               <DoorOpen className="w-6 h-6 mb-2" />
               <h3 className="font-semibold mb-2">Add your house rules</h3>
               <p className="text-sm text-gray-600">Set expectations with guests</p>
+              </Link>
             </div>
             <div className="border p-4 rounded-xl">
               <Zap className="w-6 h-6 mb-2" />

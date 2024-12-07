@@ -11,7 +11,6 @@ interface Amenity {
   name: string
   icon: JSX.Element
 }
-
 export interface ExtendedPageProps {
     currentStep: number;
     totalSteps: number;
