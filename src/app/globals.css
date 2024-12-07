@@ -46,7 +46,8 @@
   --primary-color: #2A2A2A;
   --secondary-color:#007FFF;
   --notgray-color: #a2a2a2a2;
-  --background-color: #F9F9F9;
+  --shy-color: #7B7A7A;
+  
 }
 .background{
   background-color: var(--background-color);
@@ -62,6 +63,9 @@
 }
 .text-notgray{
   color: var(--notgray-color);
+}
+.text-shy{
+  color: var(--shy-color);
 }
 @layer base {
   :root {
