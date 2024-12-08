@@ -143,7 +143,7 @@ export default function HouseRules() {
               <div>
                 <Label className="text-lg text-shy">Select start time</Label>
                 <Select defaultValue="22:00">
-                  <SelectTrigger>
+                  <SelectTrigger className="border-0">
                     <SelectValue placeholder="Select time" />
                   </SelectTrigger>
                   <SelectContent>
@@ -156,7 +156,7 @@ export default function HouseRules() {
               <div>
                 <Label className="text-lg text-shy">Select end time</Label>
                 <Select defaultValue="10:00">
-                  <SelectTrigger>
+                  <SelectTrigger className="border-0">
                     <SelectValue placeholder="Select time" />
                   </SelectTrigger>
                   <SelectContent>
