@@ -40,10 +40,10 @@ export default function Listyourproperty1({
           <ArrowLeft className="h-6 w-6" />
           </Link>
         </button>
-        <div className="space-x-8 flex">
-          <button className='rounded-full p-4 font-semibold border'>Save as Draft</button>
+        <div className="space-x-4 md:space-x-8 flex">
+          <button className='rounded-full md:p-4 p-3 md:text-md text-sm font-semibold border'>Save as Draft</button>
           <Link href="/Listyourproperty2" > 
-          <button className='bg-secondary text-white py-4 px-6 rounded-full'>Continue</button>
+          <button className='bg-secondary text-white md:text-lg text-sm py-4 px-5 rounded-full'>Continue</button>
           </Link>
         </div>
       </div>
