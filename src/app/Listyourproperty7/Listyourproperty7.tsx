@@ -13,7 +13,7 @@ export interface ExtendedPageProps {
   
   export default function Listyourproperty6({ currentStep = 6, totalSteps = 6, }: ExtendedPageProps) {
     
-    const [price, setPrice] = useState('40')
+  const [price, setPrice] = useState('40')
 
   const handlePriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value.replace(/[^0-9]/g, '')
@@ -48,11 +48,10 @@ export interface ExtendedPageProps {
           <ArrowLeft className="h-6 w-6" />
           </Link>
         </button>
-        <div className="space-x-8 flex">
-          <button className='rounded-full p-4 font-semibold border'>Save as Draft</button>
+        <div className="space-x-4 md:space-x-8 flex">
+          <button className='rounded-full md:p-4 p-3 md:text-md text-sm font-semibold border'>Save as Draft</button>
           <Link href="/Listyourproperty7" > 
-          <button  className='bg-secondary text-white py-4 px-6 rounded-full'>
-            Continue</button>
+          <button className='bg-secondary text-white md:text-lg text-sm py-4 px-5 rounded-full'>Continue</button>
           </Link>
         </div>
       </div>
@@ -68,13 +67,13 @@ export interface ExtendedPageProps {
         <div className="flex items-center justify-center">
           <Dialog>
             <DialogTrigger asChild>
-              <button className=" flex gap-4 border-none focus:no-underline">
+              <button className=" flex flex-wrap gap-4 border-none border-0 focus:no-underline">
                 <div className="text-7xl font-serif items-start flex ">
-                  <span className="text-9xl font-extrabold">$</span>
-                  <span className='text-9xl font-extrabold'>{price}</span>
+                  <span className="md:text-9xl text-5xl font-semibold md:font-extrabold">$</span>
+                  <span className='md:text-9xl text-5xl font-semibold md:font-extrabold'>{price}</span>
                 </div>
                 <div className='flex items-end mt-20 -mr-9'>
-                <span className="text-3xl font-semibold">/Night</span>
+                <span className="md:text-3xl text-lg font-semibold">/Night</span>
                 <span className='border rounded-full items-end'>   
                   <Pencil className="h-6 w-6  m-1  transition-colors" />
                    </span>

@@ -12,12 +12,12 @@ import Footer from '@/components/footer';
 const BookingPreview: React.FC = () => {
   return (
     <>
-        <div className="max-w-7xl mx-auto mt-14 p-4">
+        <div className="max-w-7xl mx-auto mt-14 p-3">
         <div className='flex items-center'>
         <Link href="/ConfirmAndPay">
         <MoveLeft size={15} className='text-gray-400 mr-5 cursor-pointer'/>
         </Link>
-        <h1 className="text-xl md:text-3xl font-bold my-2">Preview Booking</h1>
+        <h1 className="text-[1rem] md:text-3xl font-bold my-2">Preview Booking</h1>
       </div>
       <div className='flex mt-5 max-w-5xl max-w mx-auto justify-between flex-col md:flex-row md:gap-12 gap-10'>
       <div className=" border rounded-xl max-w-xl w-full p-8">
@@ -71,8 +71,8 @@ const BookingPreview: React.FC = () => {
               <strong className='underline'>Pay Less Upfront Terms,</strong> and that Freshinn can <strong className='underline'>charge my payment method</strong> if I&apos;m responsible for damages.
             </p>
             <div className="flex items-center justify-around mt-6 gap-8">
-              <button className=" w-full p-5 border border-gray-700 text-gray-700 rounded-full ">Cancel Booking</button>
-              <button className=" w-full p-5 bg-secondary text-white rounded-full "> Print Receipt</button>
+              <button className=" w-full p-2 text-xs font-semibold md:font-normal md:text-lg md:p-5  border border-gray-700 text-gray-700 rounded-full ">Cancel Booking</button>
+              <button className=" w-full p-2 text-xs font-semibold md:font-normal md:text-lg md:p-5  bg-secondary text-white rounded-full "> Print Receipt</button>
             </div>
            
           </div>

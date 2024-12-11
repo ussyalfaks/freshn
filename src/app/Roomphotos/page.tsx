@@ -9,7 +9,7 @@ import Footer from '@/components/footer';
 export default function RoomPhotos() {
   const [photoIndex, setPhotoIndex] = useState(0)
   const [isOpen, setIsOpen] = useState(false)
-
+ 
   const photos = [
     '/img23.jpg',
     '/img22.jpg',
@@ -49,20 +49,20 @@ export default function RoomPhotos() {
       <div className="mb-6">
         <div className="flex items-center mb-2">
           <Link href='/Roomdetails'><MoveLeft size={15} className='text-gray-400 mr-5 cursor-pointer'/></Link>
-          <h1 className="text-2xl md:text-3xl font-bold">3-Bedroom Around Barnawa GRA</h1>
+          <h1 className="text-[1rem] md:text-3xl font-bold">3-Bedroom Around Barnawa GRA</h1>
         </div>
         <div className="flex flex-wrap items-center text-sm md:text-base text-secondary">
-          <Star className="w-4 h-4 fill-current text-blue-400 mr-1" />
-          <span className="mr-2">4.84</span>
-          <span className="mr-2 bg-gray-300 w-1 h-1 rounded-full" />
-          <span className="mr-2">44 reviews</span>
-          <span className="mr-2 bg-gray-300 w-1 h-1 rounded-full" />
-          <span className="mr-2 flex items-center">
+          <Star className="w-4 h-4 mb-2 fill-current text-blue-400 mr-1" />
+          <span className="mr-2 mb-2">4.84</span>
+          <span className="mr-2 mb-2 bg-gray-300 w-1 h-1 rounded-full" />
+          <span className="mr-2 mb-2">44 reviews</span>
+          <span className="mr-2 mb-2 bg-gray-300 w-1 h-1 rounded-full" />
+          <span className="mr-2 mb-2 flex items-center">
             <Image src="/wrd.svg" alt="Superhost" width={16} height={16} className="mr-1" />
             Superhost
           </span>
-          <span className="mr-2 bg-gray-300 w-1 h-1 rounded-full" />
-          <span className="flex items-center">
+          <span className="mr-2 mb-2 bg-gray-300 w-1 h-1 rounded-full" />
+          <span className="flex items-center mb-2">
             <MapPin className="mr-1 w-4 h-4 text-slate-600" />
             Barnawa, <strong className="ml-1">Kaduna</strong>
           </span>

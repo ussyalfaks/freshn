@@ -21,7 +21,7 @@ const ConfirmAndPay = () => {
         <Link href="/Roomdetails">
         <MoveLeft size={15} className='text-gray-400 mr-5 cursor-pointer'/>
         </Link>
-        <h1 className="text-xl md:text-3xl font-bold my-2">Confirm And Pay</h1>
+        <h1 className="text-[1rem] md:text-3xl font-bold my-2">Confirm And Pay</h1>
       </div>
       
       <div className="flex max-w-5xl max-w mx-auto justify-between flex-col md:flex-row gap-20">
@@ -57,7 +57,7 @@ const ConfirmAndPay = () => {
     <div className="my-4 border-b py-3">
       <h2 className="text-lg font-semibold mb-2">Choose how to pay</h2>
 
-      <div className="space-y-4">
+      <div className="">
       {/* First Option */}
       <div
         className={`flex items-center justify-between  rounded-lg p-4 my-2 cursor-pointer ${
@@ -77,7 +77,7 @@ const ConfirmAndPay = () => {
           // Selected state: Blue icon with checkmark
           <div className="flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full">
             <svg
-              className="w-4 h-4 text-white"
+              className="w-6 h-6 text-white"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -95,7 +95,7 @@ const ConfirmAndPay = () => {
           // Unselected state: Grey border icon
           <div className="flex items-center justify-center w-6 h-6 border-2 border-gray-700 rounded-full">
             <svg
-              className="w-4 h-4 text-gray-700"
+              className="w-6 h-6 text-gray-700"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -133,7 +133,7 @@ const ConfirmAndPay = () => {
           // Selected state: Blue icon with checkmark
           <div className="flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full">
             <svg
-              className="w-4 h-4 text-white"
+              className="w-6 h-6 text-white"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -151,7 +151,7 @@ const ConfirmAndPay = () => {
           // Unselected state: Grey border icon
           <div className="flex items-center justify-center w-6 h-6 border-2 border-gray-700 rounded-full">
             <svg
-              className="w-4 h-4 text-gray-700"
+              className="w-6 h-6 text-gray-700"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
