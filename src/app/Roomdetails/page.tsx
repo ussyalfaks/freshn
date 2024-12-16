@@ -3,7 +3,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import Link from 'next/link';
 import { Star, MoveLeft, MapPin, Wifi, Car, Key, ChevronDown, ChevronUp } from 'lucide-react'
-
+import Header from '@/components/Header';
 import Share from '../../../public/ShareIcon.svg';
 import Kitchen from '../../../public/KitchenIcon.svg';
 import Backyard from '../../../public/BackyardIcon.svg';
@@ -50,7 +50,9 @@ export default function PropertyListing() {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
+    <>
+     <Header/>
+    <div className="max-w-7xl mx-auto px-2 py-6">
        <div className="mb-6 flex flex-col">
          <div className='flex items-center'>
           <Link href='/Homepage'>
@@ -265,5 +267,7 @@ export default function PropertyListing() {
         </div>
       </div>
     </div>
+    
+    </>
   )
 }

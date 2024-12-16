@@ -14,7 +14,7 @@ export interface ExtendedPageProps {
     totalSteps = 6,
   }: ExtendedPageProps) {
   return (
-   <div className='bg-[#FFFFFF] h-full'>
+   <div className=' h-full'>
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
         <div className="flex h-2 rounded-full overflow-hidden">

@@ -42,7 +42,7 @@ export interface ExtendedPageProps {
 
   
   return (
-    <div className=' bg-[#FFFFFF] h-full'>
+    <div className='  h-full'>
       <div className="container mx-auto px-4 pt-8 pb-12  h-full ">
       {/* Progress Steps */}
       <div className="mb-8">

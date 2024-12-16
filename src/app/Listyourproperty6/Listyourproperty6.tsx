@@ -26,7 +26,7 @@ export default function Listyourproperty6({ currentStep = 6, totalSteps = 6, }: 
   }
 
   return (
-  <div className='bg-[#FFFFFF] h-full'>
+  <div className=' h-full'>
     <div className="container mx-auto px-4 py-8 h-screen">
       {/* Progress Steps */}
       <div className="mb-8">
