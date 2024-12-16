@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 import Link from 'next/link';
 import { Star, MoveLeft, MapPin, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import Footer from '@/components/footer';
+import Header from '@/components/Header';
 
 export default function RoomPhotos() {
   const [photoIndex, setPhotoIndex] = useState(0)
@@ -45,7 +46,8 @@ export default function RoomPhotos() {
 
   return (
    <>
-    <div className="max-w-7xl mx-auto px-4 py-8">
+   <Header/>
+    <div className="max-w-7xl mx-auto px-4 py-6">
       <div className="mb-6">
         <div className="flex items-center mb-2">
           <Link href='/Roomdetails'><MoveLeft size={15} className='text-gray-400 mr-5 cursor-pointer'/></Link>

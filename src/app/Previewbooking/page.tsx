@@ -2,7 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { MoveLeft } from 'lucide-react';
+import Header from '@/components/Header';
 import Footer from '@/components/footer';
+
 
 
 
@@ -12,15 +14,17 @@ import Footer from '@/components/footer';
 const BookingPreview: React.FC = () => {
   return (
     <>
-        <div className="max-w-7xl mx-auto mt-14 p-3">
-        <div className='flex items-center'>
-        <Link href="/ConfirmAndPay">
-        <MoveLeft size={15} className='text-gray-400 mr-5 cursor-pointer'/>
-        </Link>
+    <Header/>
+      <div className="max-w-7xl mx-auto  px-4 py-6">
+         <div className='flex items-center pb-6'>
+          <Link href="/ConfirmAndPay">
+             <MoveLeft size={15} className='text-gray-400 mr-5 cursor-pointer'/>
+          </Link>
         <h1 className="text-[1rem] md:text-3xl font-bold my-2">Preview Booking</h1>
       </div>
-      <div className='flex mt-5 max-w-5xl max-w mx-auto justify-between flex-col md:flex-row md:gap-12 gap-10'>
-      <div className=" border rounded-xl max-w-xl w-full p-8">
+
+     <div className='flex mt-5 max-w-5xl max-w mx-auto justify-between flex-col md:flex-row md:gap-12 gap-10'>
+        <div className=" border rounded-xl max-w-xl w-full p-8">
 
         <div className="rounded-lg overflow-hidden">
           <Image

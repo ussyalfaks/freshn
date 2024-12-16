@@ -17,7 +17,7 @@ const footerLinks = [
   {
     title: 'Hosting',
     links: [
-      { name: 'Add a property', href: '/add-property' },
+      { name: 'Add a property', href: '/Listyourproperty1' },
       { name: 'Hosting guide', href: '/hosting-guide' },
       { name: 'Business', href: '/business' },
     ],

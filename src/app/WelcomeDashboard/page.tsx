@@ -22,7 +22,7 @@ const WelcomeDashboard = () => {
 
   return (
     <>
-      <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="max-w-7xl mx-auto px-4 py-6">
         {/* Welcome Section */}
         <div className="mb-12">
           <h1 className="text-3xl font-bold mb-2">Welcome, Helen!</h1>
