@@ -25,10 +25,21 @@ import CalendarIcon from "../../public/appointment-02.png"
 import TicketIcon from "../../public/coupon-03.png"
 import MessageIcon from "../../public/message-02.png"
 import CreditCardIcon from "../../public/creditcard.png"
+import { StaticImageData } from 'next/image'
+
+export interface MenuItem {
+  href: string
+  label: string
+  image?: StaticImageData
+  type?: 'separator'
+}
 
 
 
-const menuItems  = [
+
+
+
+const menuItems: MenuItem[]  = [
   // { href: '/signup', label: 'Sign up' },
   { href: '/bookings', label: 'My Bookings', image: CalendarIcon },
   { href: '/coupons', label: 'My Coupons' , image: TicketIcon },
@@ -89,7 +100,7 @@ export default function Header() {
             </DropdownMenuTrigger>
              </div>
             <DropdownMenuContent align="end" className="border-0 bg-[#F9F9F9] w-60 focus:outline-none outline-none px-5 pb-6 mt-3">
-           
+            
               {menuItems.map((item, index) => 
                 item.type === 'separator' ? (
                   <DropdownMenuSeparator key={index} />
