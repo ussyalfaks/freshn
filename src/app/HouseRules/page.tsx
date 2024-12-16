@@ -22,7 +22,7 @@ export default function HouseRules() {
 
   return (
    <>
-    <div className="max-w-3xl px-11 py-8">
+    <div className="max-w-3xl px-11 py-6">
       <div className="space-y-6">
         <div>
           <h1 className="text-3xl font-semibold mb-2">Set Your House Rules</h1>

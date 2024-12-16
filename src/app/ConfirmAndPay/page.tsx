@@ -16,8 +16,8 @@ const ConfirmAndPay = () => {
   return (
    <>
    <Header/>
-  <div className="max-w-7xl mx-auto mt-14 p-4">
-      <div className='flex items-center'>
+  <div className="max-w-7xl mx-auto px-4 py-6">
+      <div className='flex items-center pb-6'>
         <Link href="/Roomdetails">
         <MoveLeft size={15} className='text-gray-400 mr-5 cursor-pointer'/>
         </Link>

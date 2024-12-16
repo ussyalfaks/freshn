@@ -15,8 +15,8 @@ export default function Listyourproperty1({
 }: ExtendedPageProps) {
 
   return (
-    <div className='bg-[#FFFFFF] h-full'>
-<div className= "container mx-auto px-4 py-8 h-screen">
+    <div className=' h-full'>
+<div className= "max-w-7xl mx-auto px-4 py-8 h-screen">
       <div className="mb-8">
         <div className="flex h-2 rounded-full overflow-hidden">
           {Array.from({ length: totalSteps }, (_, i) => (

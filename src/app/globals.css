@@ -184,14 +184,13 @@ body{
   background-image: url('/Softlight.png');
   background-size: cover;
   background-color: #007FFF;
-  background-blend-mode: color-burn;
+  background-blend-mode: multiply;
 }
 .bg-pattern {
-  display: block;
   background-image: url('/pattern.png');
   background-size: cover;
   background-color: #007FFF;
-  background-blend-mode: color-burn;
+  background-blend-mode:color-dodge;
 }
 
 .mapbg{
