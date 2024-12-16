@@ -45,7 +45,7 @@ const menuItems: MenuItem[]  = [
   { href: '/coupons', label: 'My Coupons' , image: TicketIcon },
   { href: '/messages', label: 'Message Center' , image: MessageIcon },
   { href: '/payment', label: 'Payment' , image: CreditCardIcon },
-  { type: 'separator' },
+  { type: 'separator' , href: '', label: ''},
   { href: '/settings', label: 'Settings' },
   { href: '/host', label: 'Host Login' },
   { href: '/help', label: 'Help Center' },
