@@ -2,6 +2,7 @@
 
 import React from "react";
 import Listyourproperty3 from "./Listyourproperty3";
+import Header from "@/components/Header";
 
 export interface PageProps {
   params?: Record<string, string | string[] | undefined>; // Explicit type for params
@@ -15,10 +16,18 @@ export interface ExtendedPageProps {
 
 const Page: React.FC = () => {
   return (
-    <Listyourproperty3
-      currentStep={3} 
-      totalSteps={6} 
-    />
+
+ <>
+   <Header/>
+
+   <Listyourproperty3
+     currentStep={3} 
+     totalSteps={6} 
+   />
+   
+   
+   </>
+
   );
 };
 

@@ -23,7 +23,7 @@ export default function Listyourproperty1({
             <div 
               key={i} 
               className={`flex-1 ${
-                i < currentStep 
+                i < currentStep  
                   ? 'bg-blue-500 rounded-full' 
                   : i === currentStep 
                     ? 'bg-gray-200 rounded-full' 
