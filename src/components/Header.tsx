@@ -86,7 +86,7 @@ export default function Header() {
           </ul>
         </nav>
 
-        {/* Desktop User Menu */}
+        {/* Desktop User Menu*/}
         <div className="hidden md:block">
           <DropdownMenu>
              <div className='bg-secondary flex items-center font-semibold text-white px-4 py-2 rounded-full space-x-2'>
