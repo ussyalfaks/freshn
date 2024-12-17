@@ -33,7 +33,6 @@ export default function Listyourproperty1({
           ))}
         </div>
       </div>
-      
       <div className="flex justify-between items-center mb-8">
         <button className="text-gray-600">
         <Link href="/">
