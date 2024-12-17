@@ -124,8 +124,7 @@ export default function Header() {
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
-
-        {/* Mobile Menu */}
+        {/* Mobile Menu*/}
         <Sheet>
           <SheetTrigger asChild className="md:hidden">
             <button className="p-2">
