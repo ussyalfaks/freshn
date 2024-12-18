@@ -57,7 +57,7 @@ const menuItems: MenuItem[]  = [
 
 export default function Header() {
   return (
-    <header className=" flex  justify-between z-50 items-center py-5 px-10 border-b-2 border-[#DBE1E766] ">
+    <header className=" flex  justify-between z-50 items-center py-5 px-5 border-b-2 border-[#DBE1E766] ">
       <Link href="/" className="text-2xl font-bold flex flex-row items-center font-serif">
         <Image
           src={Logo}
