@@ -41,6 +41,8 @@ export interface MenuItem {
 
 const menuItems: MenuItem[]  = [
   // { href: '/signup', label: 'Sign up' },
+  // for now the ge re not creted, i will crete one ge 
+  // for showing coming for llthe ges before the ,
   { href: '/bookings', label: 'My Bookings', image: CalendarIcon },
   { href: '/coupons', label: 'My Coupons' , image: TicketIcon },
   { href: '/messages', label: 'Message Center' , image: MessageIcon },
@@ -106,7 +108,7 @@ export default function Header() {
                   <DropdownMenuSeparator key={index} />
                 ) : (
                   <DropdownMenuItem key={index}>
-                     <Link href={item.href} className="w-full flex items-center my-1">
+                     <Link href={item.href} className="w-full  flex items-center my-1">
                       {item.image && (
                         <Image
                           src={item.image}
