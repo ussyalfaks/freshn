@@ -45,7 +45,6 @@ export default function Listyourproperty6({ currentStep = 6, totalSteps = 6, }: 
           ))}
         </div>
       </div>
-
       {/* Navigation */}
       <div className="flex justify-between items-center mb-8">
         <button className="text-gray-600">
