@@ -18,7 +18,6 @@ export interface ExtendedPageProps {
   }: ExtendedPageProps) {
   return (
    <div className=' h-full'>
-
 <div className="container mx-auto px-4 py-8">
       {/* Progress Steps */}
       <div className="mb-8">
