@@ -59,7 +59,6 @@ export default function Listyourproperty6({ currentStep = 6, totalSteps = 6, }: 
           </Link>
         </div>
       </div>
-
       {/* Main Content */}
       <div className="max-w-2xl lg:ml-56">
         <p className="text-sm text-muted-foreground mb-2">List your Property</p>
