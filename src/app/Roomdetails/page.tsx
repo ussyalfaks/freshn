@@ -1,6 +1,6 @@
 "use client";
 import Image from 'next/image'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Link from 'next/link';
 import { Star, MoveLeft, MapPin, Wifi, Car, Key, ChevronDown, ChevronUp } from 'lucide-react'
 import Header from '@/components/Header';
@@ -11,6 +11,7 @@ import Parking from '../../../public/ParkingIcon.svg';
 import GardenView from '../../../public/GardenViewIcon.svg';
 import Workspace from '../../../public/WorkspaceIcon.svg';
 import WIFI from '../../../public/WIFIIcon.svg';
+import Footer from '@/components/footer';
 
 
 
@@ -267,7 +268,8 @@ export default function PropertyListing() {
         </div>
       </div>
     </div>
-    
+        <Footer/>
+
     </>
   )
 }
