@@ -71,7 +71,7 @@ export default function CategoriesTab() {
           <div className="relative items-center flex-grow max-w-[calc(100%-130px)]">
             <div 
               ref={scrollRef} 
-              className="flex overflow-x-auto scrollbar-hide space-x-2 px-10"
+              className="flex overflow-x-auto scrollbar-hide space-x-2 px-8"
               style={{ scrollBehavior: 'smooth' }}
               onScroll={checkScroll}
             >

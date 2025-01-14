@@ -43,16 +43,16 @@ const menuItems: MenuItem[]  = [
   // { href: '/signup', label: 'Sign up' },
   // for now the ge re not creted, i will crete one ge 
   // for showing coming for llthe ges before the ,
-  { href: '/bookings', label: 'My Bookings', image: CalendarIcon },
-  { href: '/coupons', label: 'My Coupons' , image: TicketIcon },
-  { href: '/messages', label: 'Message Center' , image: MessageIcon },
-  { href: '/payment', label: 'Payment' , image: CreditCardIcon },
+  { href: '/', label: 'My Bookings', image: CalendarIcon },
+  { href: '/', label: 'My Coupons' , image: TicketIcon },
+  { href: '/', label: 'Message Center' , image: MessageIcon },
+  { href: '/', label: 'Payment' , image: CreditCardIcon },
   { type: 'separator' , href: '', label: ''},
-  { href: '/settings', label: 'Settings' },
-  { href: '/host', label: 'Host Login' },
-  { href: '/help', label: 'Help Center' },
-  { href: '/disputes', label: 'Disputes and Reports' },
-  { href: '/logout', label: 'Log out' },
+  { href: '/', label: 'Settings' },
+  { href: '/', label: 'Host Login' },
+  { href: '/', label: 'Help Center' },
+  { href: '/', label: 'Disputes and Reports' },
+  { href: '/', label: 'Log out' },
 ]
 
 
@@ -108,7 +108,7 @@ export default function Header() {
                   <DropdownMenuSeparator key={index} />
                 ) : (
                   <DropdownMenuItem key={index}>
-                     <Link href={item.href} className="w-full  flex items-center my-1">
+                     <Link href={item.href} className="w-full disabled:opacity-75 flex items-center my-1">
                       {item.image && (
                         <Image
                           src={item.image}

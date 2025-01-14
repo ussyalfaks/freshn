@@ -21,13 +21,13 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="relative opacity-95 z-50 h-[600px] bg-gray-100">
+    <div className="relative w-full opacity-95 z-50 h-[600px] bg-gray-100">
       <div
         className="herobg absolute inset-0 bg-cover bg-center -z-10"
       ></div>
       <div className="absolute inset-0 bg-[#0d213b80] opacity-50"></div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-[#F9F9F9]">
+      <div className="relative z-10 flex w-full flex-col items-center justify-center h-full text-[#F9F9F9]">
         <h1 className="ebgaramond px-3  text-4xl md:text-4xl font-bold uppercase text-center mb-4">
           Where comfort MEETS STYLE
         </h1>
@@ -36,7 +36,7 @@ export default function Hero() {
         </p>
 
         {/* Conditionally apply 'fixed' class based on scroll */}
-        <div className={`${isFixed ? 'md:fixed md:top-0 md:left-0 md:w-full md:z-50' : ''}`}>
+        <div className={`${isFixed ? 'md:fixed md:top-0 md:left-0 w-full md:z-50' : ''}`}>
           <SearchBar />
         </div>
       </div>
