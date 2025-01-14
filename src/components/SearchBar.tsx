@@ -220,9 +220,10 @@ export default function SearchBar() {
   }
 
   return (
-    <div className="flex items-center justify-center  w-full px-4 md:px-0">
-    <div className="flex flex-col md:flex-row items-center  justify-center w-80 md:max-w-3xl  mx-auto">
+    <div className="flex items-center justify-center w-full  px-4 md:px-0">
+    <div className="flex flex-col md:flex-row items-center  justify-center w-80 md:w-3/4   mx-auto">
       <div className="flex w-full md:flex-row flex-col border-2 rounded-xl py-6 px-4 md:py-2 md:px-2 border-gray-400 md:border-none items-center bg-none md:bg-white space-y-4 md:space-y-0 md:space-x-2 md:rounded-full shadow-none overflow-hidden">
+        
         <Popover>
           <PopoverTrigger asChild>
             <div className="flex-1 items-center bg-white border-2 border-notgray md:border-none rounded-2xl w-full md:w-96 cursor-pointer">
